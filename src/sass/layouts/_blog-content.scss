@@ -1,0 +1,56 @@
+body {
+  background-color: #01383a;
+}
+
+.test {
+  @include mobile {
+    background-color: red;
+  }
+}
+.blog-list {
+  color: var(--main-title-color);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.19;
+  @include tablet {
+  &__tablet {
+    display: flex;
+  }
+}
+  &__item {
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h2 {
+    font-size: 24px;
+    line-height: 1.17;
+    margin-bottom: 16px;
+  }
+  img {
+    width: 100%;
+  }
+  &__metadata {
+    margin-bottom: 16px;
+
+    & > div {
+      margin-top: 8px;
+    }
+  }
+  &__date {
+    color: var(--second-card-color);
+  }
+  p {
+    font-weight: 400;
+  }
+  &__readmore {
+    text-align: right;
+    margin-top: 8px;
+    a {
+      color: var(--accent-color);
+    }
+  }
+}

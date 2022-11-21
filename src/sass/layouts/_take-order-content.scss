@@ -1,0 +1,47 @@
+.take {
+  padding-left: 0;
+  padding-right: 0;
+
+  background-image: url(../images/background-mobile.jpg);
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/background-mobile-2x.jpg);
+  }
+}
+.take-order {
+}
+.take_order-title-mob {
+  padding-left: 16px;
+  padding-bottom: 35px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  padding-top: 40px;
+  color: #ffffff;
+}
+.vector-one {
+  position: absolute;
+  top: 40px;
+}
+.vector-two {
+  position: absolute;
+  top: 44px;
+}
+.take_order-subtitle {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  padding-left: 16px;
+  color: #ffffff;
+}
+
+.order-mob {
+  border-radius: 12px;
+  display: flex;
+  gap: 0;
+}
+
+.img-mob-one {
+  border-radius: 12px;
+}

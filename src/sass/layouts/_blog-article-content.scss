@@ -1,6 +1,5 @@
 
 .container-article{
-    // position: relative;
     background-color: var(--background-color);
 
     padding-top: 40px;
@@ -12,18 +11,18 @@
     //     padding-bottom: 24px;
     // }
     
-    // @include desktop {
-    // padding-top: 112px;
-    // padding-bottom: 16px;
-    // }
-    
-}
-img {
-    @media screen and (max-width: 480px) {
-        width: 100%;
+    @include desktop {
+    padding-top: 112px;
+    padding-bottom: 120px;
     }
     
-  }
+}
+// img {
+//     @media screen and (max-width: 480px) {
+//         width: 100%;
+//     }
+    
+//   }
 .article-title{
 font-family: 'Roboto';
 font-style: normal;
@@ -42,12 +41,10 @@ color: var(--main-title-color);
 }
 
 .container-img{
-//   background-color: var(--background-color); 
-// position: absolute;
-   width: 100%;
-   height: 100%;
-   margin: 0 auto; 
-   padding-bottom: 48px;
+    position: relative;
+    left: -40px;
+   padding-top: 16px;
+   padding-bottom: 64px;
 @include mobile {
     width: 480px;
 }
@@ -58,6 +55,7 @@ color: var(--main-title-color);
 
 @include desktop {
     width: 1280px;
+
 }
 }
 .article-img{
@@ -73,4 +71,60 @@ color: var(--main-title-color);
     @include desktop {
         width: 1280px;
     } 
+}
+.article-data{
+    display: flex;
+    padding-top: 16px;
+    padding-bottom: 24px;
+}
+.article-data-item1, .article-data-item2{
+    display: block;
+}
+.article-data-item1{
+font-weight: 600;
+font-size: 24px;
+line-height: 100%;
+/* identical to box height, or 24px */
+color: #86E543;
+}
+.article-data-item2{
+    margin-left: auto;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    /* identical to box height, or 24px */
+    color: #8D9289;
+}
+
+.article-text-p{
+   
+    font-weight: 400;
+font-size: 24px;
+line-height: 28px;
+
+color: #FFFFFF;
+}
+.article-game{
+    display: flex;
+    margin-bottom: 48px;
+}
+.article-photo{
+    display: block;
+    padding-top: 64px;
+    border-radius: 12px;
+    
+}
+.article-text{
+    width: 690px;
+    margin-left: auto;
+    display: block;
+}
+.article-ol{
+font-weight: 400;
+font-size: 24px;
+line-height: 28px;
+color: #86E543;
+}
+.article-list{
+    margin-left: 10px;
 }

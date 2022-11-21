@@ -1,1 +1,129 @@
+.footer {
+  background: #001414;
+  padding-top: 25px;
+  padding-bottom: 24px;
+  @include tablet {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
 
+.footer__container {
+  margin: 0 auto;
+  @media screen and (max-width: 480px) {
+    padding-left: 16px;
+    padding-right: 32px;
+  }
+  @include tablet {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.footer-block {
+  display: flex;
+}
+
+.footer-logo {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+  color: #ffffff;
+  display: block;
+  width: 117px;
+  text-align: center;
+  @include tablet {
+    margin-right: 61px;
+  }
+  @include desktop {
+    margin-right: 118px;
+  }
+}
+
+.footer-menu-list {
+  margin-bottom: 24px;
+  margin-top: 25px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  @include tablet {
+    margin-top: 0;
+    margin-right: 89px;
+    margin-bottom: 0;
+  }
+  @include desktop {
+    margin-right: 217px;
+  }
+}
+
+.footer-menu-item {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.footer-soc {
+  margin-left: auto;
+}
+
+.footer-soc-list {
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+  margin-top: 25px;
+  @include tablet {
+    flex-direction: row;
+    gap: 16px;
+    margin-top: 0;
+    margin-right: 73px;
+  }
+  @include desktop {
+    margin-right: 281px;
+    flex-direction: column;
+  }
+}
+
+.footer-soc-link {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-mail {
+  margin-bottom: 16px;
+}
+
+.footer-contacts-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.footer-contacts-mail {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+  color: #8d9289;
+}
+
+.footer-tel-item {
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+.footer-contacts-tel {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  color: #8d9289;
+}

@@ -7,24 +7,23 @@
 //     padding-left: 40px;
 //  } 
 // }
-.lines{
-        top: 0;
-        left: 0; 
-        bottom: 0;
-        max-width: 1280px;
-        height: 190px;
-       transform: translateY(-0%);
-        // padding: 200px;
+// .lines{
+//         top: 0;
+//         left: 0; 
+//         bottom: 0;
+//         max-width: 1280px;
+//         height: 190px;
+//        transform: translateY(-0%);
+//         // padding: 200px;
       
-        background-image: url("../images/sale-vector-22-desktop.png"),      
-          url("../images/sale-vector-21-desktop.png"),
-          url("../images/background-desktop-1.jpg");
+//         background-image: url("../images/sale-vector-22-desktop.png"),      
+//           url("../images/sale-vector-21-desktop.png"),
+//           url("../images/background-desktop-1.jpg");
     
-        background-size: 1280px, 1280px;
-        background-repeat: no-repeat;
-        background-position: top 120px left 0px, top 112px left 0px, top 0px left 0px;
-      }
-
+//         background-size: 1280px, 1280px;
+//         background-repeat: no-repeat;
+//         background-position: top 120px left 0px, top 112px left 0px, top 0px left 0px;
+//       }
 
 .sale-title {
 
@@ -32,13 +31,51 @@
     @include font (600, 24, 1.16, auto);
     color: var( --main-title-color);
     margin-left: 80px;
-    // margin-bottom: 35px;
-    transform: translateY(0%);
-    z-index: 1;
+    margin-bottom: 35px;
     @include tablet{
         margin-left: 142px;
     }
 }
+.sale::before{
+    content: "-";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 90px;
+    background-color: var(--accent-color);
+    height: 1px;
+
+    @include tablet{
+        top: 155px;
+    }
+}
+
+.sale::after{
+    content: "-";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 90px;
+    background-color: #8D9289;
+    height: 1px;
+    content: "-";
+    width: 100%;
+    height: 1px;
+    transform: translate(4px 10px);
+    background-color: #28780D;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    // margin-bottom: 24px;
+    transform: translate(1px, 10px);
+    
+
+    @include tablet{
+        top: 155px;
+    }
+
+}
+
     
 // .top-lines {
 //     position: relative;
@@ -95,6 +132,7 @@
 
 
 .sale{
+    position: relative;
     display: flex;
     padding-top: 48px;
     padding-bottom: 48px;

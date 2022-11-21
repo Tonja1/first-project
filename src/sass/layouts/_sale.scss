@@ -1,71 +1,104 @@
-.container{
-    position: relative;
-}
-
-.top-line{
-   
-//    max-width: 319px;
-    height: 1px;
-    border: 0 none;
-    margin-top: 10px;
-    background-color: var(--accent-color);
-
-    @include tablet{
-        max-width: 1280px;
-    }
-}
-
-.bottom-line{
-   
-//    max-width: 321px;
-    height: 1px;
-    border: 0 none;
+// .container{
     
-    background-color: #28780D;
+//     padding-right: 17;
+//     padding-left: 17;
+//  @include tablet{
+//     padding-right: 40px;
+//     padding-left: 40px;
+//  } 
+// }
+// .lines{
+//         top: 0;
+//         left: 0; 
+//         width: 1280px;
+//         height: 400px;
+//         padding: 200px;
+      
+//         background-image: url("../images/sale-vector-22-desktop.png"),      
+//           url("../images/sale-vector-21-desktop.png"),
+//           url("../images/background-desktop-1.jpg");
+    
+//         background-size: 1280px, 1280px;
+//         background-repeat: no-repeat;
+//         background-position: top 120px left 0px, top 112px left 0px, top 0px left 0px;
+//       }
+
+
+.sale-title {
+
+    font-family: var(--main-font);
+    @include font (600, 24, 1.16, auto);
+    color: var( --main-title-color);
+    margin-left: 80px;
+    margin-bottom: 35px;
     @include tablet{
-        max-width: 1280px;
+        margin-left: 142px;
     }
 }
+    
+// .top-lines {
+//     position: relative;
+//   }
+//   .top-line {
+//     border-top: 1px solid var(--accent-color);
+//     width: 319px;
+//     margin-bottom: 4px;
+//   }
+//   .top-line2 {
+//     border-top: 1px solid var(--accent-color);
+//     width: 8px;
+//     position: absolute;
+//     left: 315px;
+   
+//     top: -4px;
+//     transform: rotate(90deg);
+//   }
+//   .top-line3 {
+//     border-top: 1px solid var(--accent-color);
+//     width: 100%;
+//     position: absolute;
+//     left: 319px;
+//     top: -8px;
+//     margin-bottom: 4px;
+    
+//   }
 
-.middle-line{
-    height: 1px;
-    width: 20px;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    rotate: (90deg);
-    background-color: var(--accent-color);
+//   .bottom-lines {
+//     position: relative;
+//  }
 
-}
-
-.lines{
-max-width: 1280px;
-margin-bottom: 24px;
-}
-.lines::after, .lines::before{
-    content: "";
-    position: absolute;
-    margin: auto;
-    height: 1px;
-    border: 0 none;
-
-}
-.lines::after{
-    left: 0;
-    background-color: var(--accent-color);
-}
-.lines::before{
-    right: 0;
-    background-color: #28780D ;
-}
+//   .bottom-line {
+//     border-top: 1px solid #28780D;
+//     width: 324px;
+   
+//   }
+//   .bottom-line2 {
+//     border-top: 1px solid #28780D;
+//     width: 8px;
+//     position: absolute;
+//     left: 320px;
+//     top: -4px;
+//     transform: rotate(90deg);
+//   }
+//   .bottom-line3 {
+//     border-top: 1px solid #28780D;
+//     width: 100%;
+//     position: absolute;
+//     left: 324px;
+//     top: -8px;
+//    margin-bottom: 24px;
+//   }
 
 
 .sale{
     display: flex;
     padding-top: 48px;
     padding-bottom: 48px;
+    // background-image: url("../images/sale-vector-22-desktop.png"),      
+    // url("../images/sale-vector-21-desktop.png"),
+    // url("../images/background-desktop-1.jpg");
+    
+    // background-position: top 120px left 0px, top 112px left 0px, top 0px left 0px;  
     background-image: url(../images/background-mobile.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -88,6 +121,9 @@ margin-bottom: 24px;
         padding-top: 120px;
         padding-bottom: 120px;
         width: 100%;
+        
+        // background-size: 1280px, 1280px;
+        // background-position: top 120px left 0px, top 112px left 0px, top 0px left 0px;  
         background-image: url(../images/background-desktop-1.jpg);
         @include retina{
             background-image: url(../images/background-desktop-1-2x.jpg);
@@ -96,17 +132,6 @@ margin-bottom: 24px;
 }
 
 
-.sale-title {
-font-family: var(--main-font);
-@include font (600, 24, 1.16, auto);
-color: var( --main-title-color);
-// margin-bottom: 35px;
-margin-left: 80px;
-@include tablet{
-    margin-left: 142px;
-}
-
-}
 
 .sale-list{
     @include tablet{
@@ -135,6 +160,7 @@ margin-left: 80px;
 }
 
 .mobile-images{
+   
     @include mobile{
         display: block;
     }
@@ -207,15 +233,15 @@ color: #8D9289;
 }
 
 .sale-button{
-
+   
     @include font(700, 16, 1.1875, null);
     margin: 0 auto;
     color: var(--main-btn-color);
     padding: 16px 48px;
-    display: flex;
-    flex-direction: row;
+    display: block;
+    // flex-direction: row;
     justify-content: center;
     align-items: center;
-    display: flex;
+    // display: flex;
     border-radius: 16px;
 }

@@ -99,7 +99,8 @@
     // url("../images/background-desktop-1.jpg");
     
     // background-position: top 120px left 0px, top 112px left 0px, top 0px left 0px;  
-    background-image: url(../images/background-mobile.jpg);
+    background-image: url(../images/background-mobile.jpg),
+    url(../images/sale-vector-21-mobile.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -107,7 +108,8 @@
     margin-right: auto;
     
     @include retina {
-        background-image: url(../images/background-mobile-2x.jpg);
+        background-image: url(../images/background-mobile-2x.jpg),
+        url(../images/sale-vector-21-mobile.png);
     }
     @include tablet{
         padding-top: 120px;

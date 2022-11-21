@@ -7,21 +7,23 @@
 //     padding-left: 40px;
 //  } 
 // }
-// .lines{
-//         top: 0;
-//         left: 0; 
-//         width: 1280px;
-//         height: 400px;
-//         padding: 200px;
+.lines{
+        top: 0;
+        left: 0; 
+        bottom: 0;
+        max-width: 1280px;
+        height: 190px;
+       transform: translateY(-0%);
+        // padding: 200px;
       
-//         background-image: url("../images/sale-vector-22-desktop.png"),      
-//           url("../images/sale-vector-21-desktop.png"),
-//           url("../images/background-desktop-1.jpg");
+        background-image: url("../images/sale-vector-22-desktop.png"),      
+          url("../images/sale-vector-21-desktop.png"),
+          url("../images/background-desktop-1.jpg");
     
-//         background-size: 1280px, 1280px;
-//         background-repeat: no-repeat;
-//         background-position: top 120px left 0px, top 112px left 0px, top 0px left 0px;
-//       }
+        background-size: 1280px, 1280px;
+        background-repeat: no-repeat;
+        background-position: top 120px left 0px, top 112px left 0px, top 0px left 0px;
+      }
 
 
 .sale-title {
@@ -30,7 +32,9 @@
     @include font (600, 24, 1.16, auto);
     color: var( --main-title-color);
     margin-left: 80px;
-    margin-bottom: 35px;
+    // margin-bottom: 35px;
+    transform: translateY(0%);
+    z-index: 1;
     @include tablet{
         margin-left: 142px;
     }
@@ -99,8 +103,9 @@
     // url("../images/background-desktop-1.jpg");
     
     // background-position: top 120px left 0px, top 112px left 0px, top 0px left 0px;  
-    background-image: url(../images/background-mobile.jpg),
-    url(../images/sale-vector-21-mobile.png);
+    background-image: url(../images/background-mobile.jpg);
+    // url(../images/sale-vector-21-mobile.png),
+    // url(../images/sale-vector-22-mobile.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -108,15 +113,22 @@
     margin-right: auto;
     
     @include retina {
-        background-image: url(../images/background-mobile-2x.jpg),
-        url(../images/sale-vector-21-mobile.png);
+        background-image: url(../images/background-mobile-2x.jpg);
+        // url(../images/sale-vector-21-mobile-2x.png),
+        // url(../images/sale-vector-22-mobile-2x.png);
     }
     @include tablet{
         padding-top: 120px;
         padding-bottom: 120px;
+        // background-position: top 120px left 0px, top 112px left 0px, top 0px left 0px;  
         background-image: url(../images/background-tablet.jpg);
+        // url(../images/sale-vector-21-tablet.png),
+        // url(../images/sale-vector-22-tablet.png);
+
         @include retina{
             background-image: url(../images/background-tablet-2x.jpg);
+            // url(../images/sale-vector-21-tablet-2x.png),
+            // url(../images/sale-vector-22-tablet-2x.png);
         }
     }
     @include desktop{
@@ -127,13 +139,15 @@
         // background-size: 1280px, 1280px;
         // background-position: top 120px left 0px, top 112px left 0px, top 0px left 0px;  
         background-image: url(../images/background-desktop-1.jpg);
+        // url(../images/sale-vector-21-desktop.png),
+        // url(../images/sale-vector-22-desktop.png);
         @include retina{
             background-image: url(../images/background-desktop-1-2x.jpg);
+            // url(../images/sale-vector-21-desktop-2x.png),
+            // url(../images/sale-vector-22-desktop-2x.png);
         }
     }
 }
-
-
 
 .sale-list{
     @include tablet{

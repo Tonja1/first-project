@@ -44,13 +44,13 @@
     position: relative;
     display: flex;    
     padding-bottom: 48px;
-    background-image: url("../images/sale-vector-21-mobile.png"),      
-    url("../images/sale-vector-22-mobile.png"),
+    background-image: url("/src/images/svg/Vector-21.svg"),      
+    url("/src/images/svg/Vector-22.svg"),
     url("../images/background-mobile.jpg");
     
     background-repeat: no-repeat;
-    background-size: auto, auto, cover;
-    background-position: top 28px left 0px, top 32px left 0px, center;
+    background-size: 320px, 320px, cover;
+    background-position: top 0px left 0px, top 0px left 0px, center;
     margin-left: auto;
     margin-right: auto;
     

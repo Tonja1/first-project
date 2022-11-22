@@ -1,15 +1,12 @@
 .sale-title {
-
     font-family: var(--main-font);
     @include font (600, 24, 1.1667);
     color: var( --main-title-color);
     margin-left: 80px;
-    margin-bottom: 35px;
-    @include mobile {
-        @include font (600, 56, 1.1785);
-    }
+    margin-bottom: 35px;    
     @include tablet{
         margin-left: 142px;
+        @include font (600, 56, 1.1785);
     }    
 }
 

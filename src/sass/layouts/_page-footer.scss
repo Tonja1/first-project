@@ -1,37 +1,39 @@
 .footer {
-  background: #001414;
+  background: var(--footer-background-color);
+  margin: 0 auto;
   padding-top: 25px;
   padding-bottom: 24px;
   @include tablet {
     padding-top: 40px;
     padding-bottom: 40px;
   }
+  
 }
 
-.footer__container {
-  margin: 0 auto;
+.footer-container {
+  display: flex;
   @media screen and (max-width: 480px) {
     padding-left: 16px;
     padding-right: 32px;
-  }
-  @include tablet {
-    display: flex;
-    justify-content: center;
+  }  
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
   }
 }
 
 .footer-block {
   display: flex;
+  @media screen and (max-width: 767px) {
+    margin-top: 25px;
+  }
 }
 
 .footer-logo {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1.17;
-  color: #ffffff;
-  display: block;
-  width: 117px;
+  @include font (700, 24px, 1.17);  
+  color: var(--main-title-color);
+  display: block;  
   text-align: center;
+  max-width: 130px;  
   @include tablet {
     margin-right: 61px;
   }
@@ -41,13 +43,11 @@
 }
 
 .footer-menu-list {
-  margin-bottom: 24px;
-  margin-top: 25px;
+  margin-bottom: 24px;  
   display: flex;
   gap: 16px;
   flex-direction: column;
-  @include tablet {
-    margin-top: 0;
+  @include tablet {    
     margin-right: 89px;
     margin-bottom: 0;
   }
@@ -57,10 +57,8 @@
 }
 
 .footer-menu-item {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1;
-  color: #ffffff;
+  @include font (400, 16px, 1);  
+  color: var(--main-text-color);
 }
 
 .footer-soc {
@@ -70,12 +68,10 @@
 .footer-soc-list {
   display: flex;
   gap: 32px;
-  flex-direction: column;
-  margin-top: 25px;
+  flex-direction: column;  
   @include tablet {
     flex-direction: row;
-    gap: 16px;
-    margin-top: 0;
+    gap: 16px;    
     margin-right: 73px;
   }
   @include desktop {
@@ -88,10 +84,28 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: var(--icon-background-color);
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: var(--cubic-bezier);
+  &:hover {
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5), 0px 0px 20px rgba(134, 229, 67, 0.1);
+  }
+  &:focus {
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5), 0px 0px 20px rgba(134, 229, 67, 0.1);
+    outline: none;
+  }
+}
+
+.footer-soc-icon {
+  fill: var(--icon-fill);
+  .footer-soc-link:hover & {
+    fill: var(--accent-fill);
+  }
+  .footer-soc-link:focus & {
+    fill: var(--accent-fill);
+  }
 }
 
 .footer-mail {
@@ -99,18 +113,14 @@
 }
 
 .footer-contacts-text {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.19;
-  color: #ffffff;
+  @include font (400, 16px, 1.1875);  
+  color: var(--main-text-color);
   margin-bottom: 8px;
 }
 
 .footer-contacts-mail {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.19;
-  color: #8d9289;
+  @include font (400, 16px, 1.1875);
+  color: var(--contact-text-color);
 }
 
 .footer-tel-item {
@@ -120,10 +130,7 @@
 }
 
 .footer-contacts-tel {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.19;
-  letter-spacing: 0.01em;
-  text-transform: capitalize;
-  color: #8d9289;
+  @include font (400, 16px, 1.1875);
+  letter-spacing: 0.01em;  
+  color: var(--contact-text-color);
 }

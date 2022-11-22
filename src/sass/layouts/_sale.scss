@@ -1,30 +1,3 @@
-// .container{
-    
-//     padding-right: 17;
-//     padding-left: 17;
-//  @include tablet{
-//     padding-right: 40px;
-//     padding-left: 40px;
-//  } 
-// }
-// .lines{
-//         top: 0;
-//         left: 0; 
-//         bottom: 0;
-//         max-width: 1280px;
-//         height: 190px;
-//        transform: translateY(-0%);
-//         // padding: 200px;
-      
-//         background-image: url("../images/sale-vector-22-desktop.png"),      
-//           url("../images/sale-vector-21-desktop.png"),
-//           url("../images/background-desktop-1.jpg");
-    
-//         background-size: 1280px, 1280px;
-//         background-repeat: no-repeat;
-//         background-position: top 120px left 0px, top 112px left 0px, top 0px left 0px;
-//       }
-
 .sale-title {
 
     font-family: var(--main-font);
@@ -44,13 +17,13 @@
     position: relative;
     display: flex;    
     padding-bottom: 48px;
-    background-image: url("/src/images/svg/Vector-21.svg"),      
-    url("/src/images/svg/Vector-22.svg"),
+    background-image: url("/src/images/svg/Vector-212x.svg"),      
+    url("/src/images/svg/Vector-222x.svg"),
     url("../images/background-mobile.jpg");
     
     background-repeat: no-repeat;
     background-size: 320px, 320px, cover;
-    background-position: top 0px left 0px, top 0px left 0px, center;
+    background-position: top 0px left 0px, top 8px left 0px, center;
     margin-left: auto;
     margin-right: auto;
     

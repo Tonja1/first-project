@@ -1,1 +1,136 @@
+.footer {
+  background: var(--footer-background-color);
+  margin: 0 auto;
+  padding-top: 25px;
+  padding-bottom: 24px;
+  @include tablet {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  
+}
 
+.footer-container {
+  display: flex;
+  @media screen and (max-width: 480px) {
+    padding-left: 16px;
+    padding-right: 32px;
+  }  
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+}
+
+.footer-block {
+  display: flex;
+  @media screen and (max-width: 767px) {
+    margin-top: 25px;
+  }
+}
+
+.footer-logo {
+  @include font (700, 24px, 1.17);  
+  color: var(--main-title-color);
+  display: block;  
+  text-align: center;
+  max-width: 130px;  
+  @include tablet {
+    margin-right: 61px;
+  }
+  @include desktop {
+    margin-right: 118px;
+  }
+}
+
+.footer-menu-list {
+  margin-bottom: 24px;  
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  @include tablet {    
+    margin-right: 89px;
+    margin-bottom: 0;
+  }
+  @include desktop {
+    margin-right: 217px;
+  }
+}
+
+.footer-menu-item {
+  @include font (400, 16px, 1);  
+  color: var(--main-text-color);
+}
+
+.footer-soc {
+  margin-left: auto;
+}
+
+.footer-soc-list {
+  display: flex;
+  gap: 32px;
+  flex-direction: column;  
+  @include tablet {
+    flex-direction: row;
+    gap: 16px;    
+    margin-right: 73px;
+  }
+  @include desktop {
+    margin-right: 281px;
+    flex-direction: column;
+  }
+}
+
+.footer-soc-link {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--icon-background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--cubic-bezier);
+  &:hover {
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5), 0px 0px 20px rgba(134, 229, 67, 0.1);
+  }
+  &:focus {
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5), 0px 0px 20px rgba(134, 229, 67, 0.1);
+    outline: none;
+  }
+}
+
+.footer-soc-icon {
+  fill: var(--icon-fill);
+  .footer-soc-link:hover & {
+    fill: var(--accent-fill);
+  }
+  .footer-soc-link:focus & {
+    fill: var(--accent-fill);
+  }
+}
+
+.footer-mail {
+  margin-bottom: 16px;
+}
+
+.footer-contacts-text {
+  @include font (400, 16px, 1.1875);  
+  color: var(--main-text-color);
+  margin-bottom: 8px;
+}
+
+.footer-contacts-mail {
+  @include font (400, 16px, 1.1875);
+  color: var(--contact-text-color);
+}
+
+.footer-tel-item {
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+.footer-contacts-tel {
+  @include font (400, 16px, 1.1875);
+  letter-spacing: 0.01em;  
+  color: var(--contact-text-color);
+}

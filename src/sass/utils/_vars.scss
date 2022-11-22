@@ -15,9 +15,14 @@
 
 
     --background-color: #01383A;
+    --footer-background-color: #001414;
+    --icon-background-color:#ffffff;
+    --icon-fill: #001414;
+    --accent-fill: #86E543;
     --accent-color: #86E543;
+    
+    --cubic-bezier: 200ms cubic-bezier(.28, .71, .98, .66);
 
-    // --typical-lh: 1.36;
     --main-font: 'Roboto', sans-serif;
     // --bg-gradient: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2));
 }

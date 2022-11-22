@@ -17,33 +17,36 @@
     position: relative;
     display: flex;    
     padding-bottom: 48px;
-    background-image: url("/src/images/svg/Vector-212x.svg"),      
-    url("/src/images/svg/Vector-222x.svg"),
+    background-image: url("/src/images/sale-vector-21-mobile.png"),      
+    url("/src/images/sale-vector-22-mobile.png"),
     url("../images/background-mobile.jpg");
     
     background-repeat: no-repeat;
     background-size: 320px, 320px, cover;
-    background-position: top 0px left 0px, top 8px left 0px, center;
+    background-position: top 28px left 0px, top 32px left 0px, center;
     margin-left: auto;
     margin-right: auto;
     
-    @include retina {
-        // background-image: url(../images/background-mobile-2x.jpg);
-        // url(../images/sale-vector-21-mobile-2x.png),
-        // url(../images/sale-vector-22-mobile-2x.png);
-    }
+    // @include retina {
+    //     background-image: url(../images/background-mobile-2x.jpg);
+    //     url(../images/sale-vector-21-mobile-2x.png),
+    //     url(../images/sale-vector-22-mobile-2x.png);
+    // }
     @include tablet{        
         padding-bottom: 120px;
         // background-position: top 120px left 0px, top 112px left 0px, top 0px left 0px;  
-        background-image: url(../images/background-tablet.jpg);
-        // url(../images/sale-vector-21-tablet.png),
-        // url(../images/sale-vector-22-tablet.png);
+        background-image: url("../images/sale-vector-21-tablet.png"),
+        url("../images/sale-vector-22-tablet.png"),
+        url("../images/background-tablet.jpg");
+        
+        background-size: 768px, 768px, cover;
+        background-position: top 66px left 0px, top 74px left 0px, center;
 
-        @include retina{
-            background-image: url(../images/background-tablet-2x.jpg);
-            // url(../images/sale-vector-21-tablet-2x.png),
-            // url(../images/sale-vector-22-tablet-2x.png);
-        }
+        // @include retina{
+        //     background-image: url(../images/background-tablet-2x.jpg);
+        //     url(../images/sale-vector-21-tablet-2x.png),
+        //     url(../images/sale-vector-22-tablet-2x.png);
+        // }
     }
     @include desktop{
         
@@ -51,14 +54,17 @@
         
         // background-size: 1280px, 1280px;
         // background-position: top 120px left 0px, top 112px left 0px, top 0px left 0px;  
-        background-image: url(../images/background-desktop-1.jpg);
-        // url(../images/sale-vector-21-desktop.png),
-        // url(../images/sale-vector-22-desktop.png);
-        @include retina{
-            background-image: url(../images/background-desktop-1-2x.jpg);
-            // url(../images/sale-vector-21-desktop-2x.png),
-            // url(../images/sale-vector-22-desktop-2x.png);
-        }
+        background-image: url("../images/sale-vector-21-desktop.png"),
+        url("../images/sale-vector-22-desktop.png"),
+        url("../images/background-desktop-1.jpg");
+        background-size: 1280px, 1280px, cover;
+        background-position: top 66px left 0px, top 74px left 0px, center;
+        
+        // @include retina{
+        //     background-image: url(../images/background-desktop-1-2x.jpg);
+        //     url(../images/sale-vector-21-desktop-2x.png),
+        //     url(../images/sale-vector-22-desktop-2x.png);
+        // }
     }
 }
 

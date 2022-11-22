@@ -1,0 +1,301 @@
+// .container{
+    
+//     padding-right: 17;
+//     padding-left: 17;
+//  @include tablet{
+//     padding-right: 40px;
+//     padding-left: 40px;
+//  } 
+// }
+// .lines{
+//         top: 0;
+//         left: 0; 
+//         bottom: 0;
+//         max-width: 1280px;
+//         height: 190px;
+//        transform: translateY(-0%);
+//         // padding: 200px;
+      
+//         background-image: url("../images/sale-vector-22-desktop.png"),      
+//           url("../images/sale-vector-21-desktop.png"),
+//           url("../images/background-desktop-1.jpg");
+    
+//         background-size: 1280px, 1280px;
+//         background-repeat: no-repeat;
+//         background-position: top 120px left 0px, top 112px left 0px, top 0px left 0px;
+//       }
+
+.sale-title {
+
+    font-family: var(--main-font);
+    @include font (600, 24, 1.16, auto);
+    color: var( --main-title-color);
+    margin-left: 80px;
+    margin-bottom: 35px;
+    @include tablet{
+        margin-left: 142px;
+    }
+}
+.sale::before{
+    content: "-";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 90px;
+    background-color: var(--accent-color);
+    height: 1px;
+
+    @include tablet{
+        top: 155px;
+    }
+}
+
+.sale::after{
+    content: "-";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 90px;
+    background-color: #8D9289;
+    height: 1px;
+    content: "-";
+    width: 100%;
+    height: 1px;
+    transform: translate(4px 10px);
+    background-color: #28780D;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    // margin-bottom: 24px;
+    transform: translate(1px, 10px);
+    
+
+    @include tablet{
+        top: 155px;
+    }
+
+}
+
+    
+// .top-lines {
+//     position: relative;
+//   }
+//   .top-line {
+//     border-top: 1px solid var(--accent-color);
+//     width: 319px;
+//     margin-bottom: 4px;
+//   }
+//   .top-line2 {
+//     border-top: 1px solid var(--accent-color);
+//     width: 8px;
+//     position: absolute;
+//     left: 315px;
+   
+//     top: -4px;
+//     transform: rotate(90deg);
+//   }
+//   .top-line3 {
+//     border-top: 1px solid var(--accent-color);
+//     width: 100%;
+//     position: absolute;
+//     left: 319px;
+//     top: -8px;
+//     margin-bottom: 4px;
+    
+//   }
+
+//   .bottom-lines {
+//     position: relative;
+//  }
+
+//   .bottom-line {
+//     border-top: 1px solid #28780D;
+//     width: 324px;
+   
+//   }
+//   .bottom-line2 {
+//     border-top: 1px solid #28780D;
+//     width: 8px;
+//     position: absolute;
+//     left: 320px;
+//     top: -4px;
+//     transform: rotate(90deg);
+//   }
+//   .bottom-line3 {
+//     border-top: 1px solid #28780D;
+//     width: 100%;
+//     position: absolute;
+//     left: 324px;
+//     top: -8px;
+//    margin-bottom: 24px;
+//   }
+
+
+.sale{
+    position: relative;
+    display: flex;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    // background-image: url("../images/sale-vector-22-desktop.png"),      
+    // url("../images/sale-vector-21-desktop.png"),
+    // url("../images/background-desktop-1.jpg");
+    
+    // background-position: top 120px left 0px, top 112px left 0px, top 0px left 0px;  
+    background-image: url(../images/background-mobile.jpg);
+    // url(../images/sale-vector-21-mobile.png),
+    // url(../images/sale-vector-22-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @include retina {
+        background-image: url(../images/background-mobile-2x.jpg);
+        // url(../images/sale-vector-21-mobile-2x.png),
+        // url(../images/sale-vector-22-mobile-2x.png);
+    }
+    @include tablet{
+        padding-top: 120px;
+        padding-bottom: 120px;
+        // background-position: top 120px left 0px, top 112px left 0px, top 0px left 0px;  
+        background-image: url(../images/background-tablet.jpg);
+        // url(../images/sale-vector-21-tablet.png),
+        // url(../images/sale-vector-22-tablet.png);
+
+        @include retina{
+            background-image: url(../images/background-tablet-2x.jpg);
+            // url(../images/sale-vector-21-tablet-2x.png),
+            // url(../images/sale-vector-22-tablet-2x.png);
+        }
+    }
+    @include desktop{
+        padding-top: 120px;
+        padding-bottom: 120px;
+        width: 100%;
+        
+        // background-size: 1280px, 1280px;
+        // background-position: top 120px left 0px, top 112px left 0px, top 0px left 0px;  
+        background-image: url(../images/background-desktop-1.jpg);
+        // url(../images/sale-vector-21-desktop.png),
+        // url(../images/sale-vector-22-desktop.png);
+        @include retina{
+            background-image: url(../images/background-desktop-1-2x.jpg);
+            // url(../images/sale-vector-21-desktop-2x.png),
+            // url(../images/sale-vector-22-desktop-2x.png);
+        }
+    }
+}
+
+.sale-list{
+    @include tablet{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 38px;
+    }
+    @include desktop{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    }
+}
+
+.sale-item{
+    display: block;
+    width: 100%;
+    @include tablet{
+        width: calc((100% - 38px) / 2);
+    }
+
+    @include desktop{
+        width: calc((100% - 20px * 3) / 4);  
+    }
+    
+}
+
+.mobile-images{
+   
+    @include mobile{
+        display: block;
+    }
+    @include tablet{
+        display: none;
+    }
+    @include desktop{
+        display: none;
+    }
+}
+
+.tablet-images{
+    @include mobile{
+    display: none;
+    }
+   @include tablet{
+    display: block;
+   }
+   @include desktop{
+    display: none;
+   }
+
+}
+.desktop-images{
+    @include mobile{
+        display: none;
+    }
+    @include tablet{
+        display: none;
+    }
+    @include desktop{
+        display: block;
+    }
+}
+
+.sale-image {
+    width: 100%;
+    align-items: center;
+    border-radius: 12px;
+    margin-bottom: 8px;
+
+}
+
+.price {
+   margin-bottom: 44px;
+   max-width: 285px;
+}
+
+.price-item {
+    @include font(600, 22, 1.18, auto);
+    color: var( --accent-color);
+    margin-bottom: 11px;
+    width: 261px;
+}
+
+.sale-price {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+}
+.sale-before {
+ @include font(600, 14, 100%, auto);
+ text-decoration-line: line-through;
+color: #8D9289;
+}
+.sale-after {
+    @include font(600, 20, 100%, auto);
+    color: var(--accent-color);
+}
+
+.sale-button{
+   
+    @include font(700, 16, 1.1875, null);
+    margin: 0 auto;
+    color: var(--main-btn-color);
+    padding: 16px 48px;
+    display: block;
+    // flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    // display: flex;
+    border-radius: 16px;
+}

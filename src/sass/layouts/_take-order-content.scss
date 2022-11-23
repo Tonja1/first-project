@@ -1,8 +1,8 @@
 .take {
-  padding-left: 0;
-  padding-right: 0;
-  justify-content: center;
-
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 48px;
+  margin: 0 auto;
   background-image: url(../images/background-mobile.jpg);
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -16,11 +16,10 @@
 }
 
 .take_order-title-mob {
-  padding-bottom: 35px;
   font-weight: 600;
   font-size: 24px;
   line-height: 28px;
-  padding-top: 40px;
+  margin-bottom: 40px;
   color: #ffffff;
 }
 .vector-one {
@@ -106,14 +105,14 @@
 }
 
 .order-chice-select {
-   display: block;
-   position: relative;
-   appearance: none;
-   -webkit-appearance: none;
-    -moz-appearance: none;
-   font-family: inherit;
+  display: block;
+  position: relative;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-family: inherit;
 }
-.order-chice-select::after{
+.order-chice-select::after {
   content: 'url(./images/polygon 3.png)';
   position: absolute;
 }

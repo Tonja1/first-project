@@ -1,12 +1,19 @@
-body {
+.blog {
   background-color: #01383a;
+  @media screen and (max-width: 479px) {
+    padding: 0;
+  }
+}
+.blog-page {
+  padding: 40px 0 48px;
+  @include tablet {
+    padding: 120px 0;
+  }
 }
 
 .blog-list {
   color: var(--main-title-color);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
+  @include font (500, 16, 1.19);  
 
   @include tablet {
     font-size: 24px;
@@ -132,8 +139,4 @@ body {
       color: var(--accent-color);
     }
   }
-}
-
-.blog-page {
-  margin: 48px 0 120px;
 }

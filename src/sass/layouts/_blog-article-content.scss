@@ -14,7 +14,6 @@
     @media screen and (max-width: 479px) {
         padding-left: 16px;
         padding-right: 16px;
-    //    padding-top: 24px;
 
             }
 }
@@ -35,34 +34,36 @@ img{
     background-size: 320px, 320px, cover;
     background-repeat: no-repeat;
     background-position: top 80px left 0px, top 76px left 0px;
-    background-color: #01383A;  
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-        background-image:url("../images/blog-article-vector-27-mobile-2x.png"), 
+    background-color: var(--background-color); 
+    
+    
+
+    @include retina{
+    background-image:url("../images/blog-article-vector-27-mobile-2x.png"), 
     url("../images/blog-article-vector-26-mobile-2x.png");
-    background-size: 320px, 320px, cover;
+    background-size: 100%, 100%, cover;
     background-repeat: no-repeat;
     background-position: top 80px left 0px, top 76px left 0px;
 
     }
     @media screen and (max-width: 479px) {
-        background-color: #01383A;  
-  padding-top: 40px;
+    background-color:var(--background-color);
+    padding-top: 40px;
     width: 100%;
-    // height: 110px;
-
-
-    
     }
     @include mobile {
         width: 480px;
         height: 130px;
         margin: auto;
         text-align: center;
+        background-image:url("../images/blog-article-vector-27-mobile.png"), 
+        url("../images/blog-article-vector-26-mobile.png");
 
-
-        
+        background-image:url("../images/blog-article-vector-27-mobile-2x.png"), 
+        url("../images/blog-article-vector-26-mobile-2x.png");
+        background-size: 100%, 100%, cover;
+    background-repeat: no-repeat;
+    background-position: top 80px left 0px, top 76px left 0px;
     }
 
     @include tablet{
@@ -96,102 +97,49 @@ padding-left: 16px;
 font-family: 'Roboto';
 font-style: normal;
 color: var(--main-title-color);
-// font-weight: 600;
-// font-size: 24px;
-// line-height: 28px;
-@include font(500, 24px, 28px);
-// padding-top: 20px;
-
-
-
+@include font(500, 24px, 1.16);
 @include tablet {
-@include font(500, 56px, 56px);
+@include font(500, 56px, 1);
 padding-left: 40px;
 padding-bottom: 24px;
 }
 @include desktop {
-@include font(600, 56px, 56px);
+@include font(600, 56px, 1);
 padding-left: 40px;
 padding-bottom: 16px;
 }
 }
-
-// .container-img{
-//     position: relative;
-//     left: -40px;
-//    padding-top: 16px;
-//    padding-bottom: 64px;
-// @include mobile {
-//     width: 480px;
-// }
-
-// @include tablet {
-//     width: 768px;
-// }
-
-// @include desktop {
-//     width: 1280px;
-
-// }
-
-// .article-img{
-//     width: 100%;
-//     height: 8px;
-//     @include mobile {
-//         width: 480px;
-//     }
-//     @include tablet {
-//         width: 768px;
-//     }
-    
-//     @include desktop {
-//         width: 1280px;
-//     } 
-// }
-
-
 .article-game{
    width: 100%;
-   
-    // display: flex;
-    // margin-bottom: 48px;
     @include mobile {
         width: 400px;
         height: 316px;
     }
-
     @include tablet {
         width: 688px;
         height: 244;
         display: flex;
     }
-
     @include desktop {
         width: 1200px;
         height: 396px;
         display: flex;
-    // margin-bottom: 48px;
     }}
     .article-photo{
         display: block;
-        // padding-top: 64px;
         border-radius: 12px;  
-        // width: 320px;
-            // height: 228px; 
-            @media screen and (maw-width: 480px) {
-                width: 100%;
-            }
+        @media screen and (maw-width: 480px) {
+        width: 100%;}
+
         @include mobile {
-            width: 320px;
-            height: 228px; 
-                }
+        width: 320px;
+         height: 228px; }
+         
          @include tablet {
-            width: 387px;
-            height: 228px; 
-            // padding-top: 24px;
-        border-radius: 12px;        
-                }
-                
+         width: 387px;
+        height: 228px; 
+        border-radius: 12px;}   
+
          @include desktop {
         width: 387px;
         height: 384px;
@@ -212,87 +160,51 @@ padding-bottom: 16px;
          height: 244px;
         justify-content:  flex-end;
         margin-left: auto;
-        display: block; 
-        }
+        display: block; }
         @include desktop {
           width: 690px;  
         }}
 
 .article-data{
-    // margin: auto;
-    // margin-bottom: 0;
     padding-top: 20px;
-   
     @include tablet {
-        padding-top: 100px;
-     
-    }
+    padding-top: 100px;}
     @include desktop {
-
-      display: flex;
-    padding-top: 16px;
-    // padding-bottom: 24px;  
-    }
-
+    display: flex;
+    padding-top: 16px;}
 }
 .article-data-item1, .article-data-item2{
     display: block;
 }
 .article-data-item1{
-    
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 100%;
-    color: #FFFFFF;
+    @include font(500, 16px, 1);
+    color: var(--main-title-color);
     padding-bottom: 8px;
-
-@include tablet {
+    @include tablet {
     width: 134px;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 100%;
-    color: #86E543;
-    padding-bottom: 32px;
-    
-                }
- @include desktop {
+    @include font(500, 24px, 1);
+    color: var(--second-text-color);
+    padding-bottom: 32px;}
+    @include desktop {
     width: 250px;
-font-weight: 500;
-font-size: 24px;
-line-height: 100%;
-color: #86E543;
+    @include font(500, 24px, 1);
+    color: var(--second-text-color);
                 }
 
 }
 .article-data-item2{
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 100%;
-   
-    color: #8D9289;
-
+    @include font(500, 16px, 1);
+    color:var(--data-text-color);
     @include mobile {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 100%;
-        color: #8D9289;      
-            }
- @include tablet {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 100%;
-    color: #8D9289;
-            }
-            
-@include desktop {
+     @include font(500, 16px, 1);
+     color:var(--data-text-color);}
+    @include tablet {
+    @include font(500, 24px, 1);
+    color:var(--data-text-color);}    
+    @include desktop {
      margin-left: auto;
-     font-weight: 500;
-     font-size: 24px;
-     line-height: 100%;
-     /* identical to box height, or 24px */
-     color: #8D9289;
-} 
-
+     @include font(500, 24px, 1);
+     color:var(--data-text-color);} 
 }
 
 
@@ -300,89 +212,56 @@ color: #86E543;
 .text-v{
     display: none;
     @include desktop{
-        display: block;
+    display: block;
     }
 }
  .text-n{
     @include desktop{
-        display: none;
+    display: none;
  }   
 }
 .article-text-property{
-    font-weight: 400;
-font-size: 16px;
-line-height: 19px;
-
-color: #FFFFFF;
-@include mobile {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    color: #FFFFFF;
+    @include font(400, 16px, 1.16);
+    color: var(--main-title-color);
+    @include mobile {
+    @include font(400, 16px, 1.187);
+    color: var(--main-title-color);
 }
-
     @include tablet {
     padding-top: 0;
-    font-weight: 400;
-font-size: 24px;
-line-height: 28px;}
-
+    @include font(400, 24px, 1.16);
+}
     @include desktop{
     padding-top: 48px;
-font-weight: 400;
-font-size: 24px;
-line-height: 28px;
-color: #FFFFFF;}
-
+    @include font(400, 24px, 1.16);
+    color: var(--main-title-color);}
 }
 .article-text-p{
-    font-weight: 400;
-font-size: 16px;
-line-height: 19px;
-
-color: #FFFFFF;
-@include mobile {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    color: #FFFFFF;
-}
- @include tablet {
-font-weight: 400;
-font-size: 24px;
-line-height: 28px;
-color: #FFFFFF;
-    }
-@include desktop{
-font-weight: 400;
-font-size: 24px;
-line-height: 28px;
-color: #FFFFFF;}
-
+    @include font(400, 16px, 1.187);
+    color: var(--main-title-color);
+    @include mobile {
+    @include font(400, 16px, 1.187);
+    color: var(--main-title-color);}
+    @include tablet {
+    @include font(400, 24px, 1.16);
+    color: var(--main-title-color);}
+    @include desktop{
+    @include font(400, 24px, 1.16);
+    color: var(--main-title-color);}
 }
 
 .article-text-ol{
-   
-     font-weight: 400;
-font-size: 16px;
-line-height: 19px;
-
-@include tablet {
+    @include font(400, 16px, 1.1875);
+    @include tablet {
     padding-top: 0;
-    font-weight: 400;
-font-size: 24px;
-line-height: 28px;
-color: #86E543;
-}
+    @include font(400, 24px, 1.16);
+    color: var(--second-text-color);}
+     @include desktop{ 
+     @include font(400, 24px, 1.16);
 
-    @include desktop{ 
-         font-size: 24px;
-    line-height: 28px;
-font-weight: 400;
-    color: #86E543;}
-
-
-   
+    //  color: #86E543;
+     color: var(--second-text-color);
+    }
 }
 .article-margin-li{
     margin-left: 30px;

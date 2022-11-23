@@ -14,7 +14,7 @@
 }
 
 
-.modal-cart{
+.modal{
     padding: 88px 80px;
     max-width: 768px;
     min-height: 524px;
@@ -22,44 +22,10 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1);
+    // transform: translate(-50%, -50%) scale(1);
     transition: var(--cubic-bezier);
     @include mobile{
         padding: 88px 40px;
-        width: 688px;
-        height: 524px;
-    }
-}
-
-.modal-took-order{
-    padding: 88px 80px;
-    max-width: 768px;
-    min-height: 524px;
-    background-color: var(--main-btn-color);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    transition: var(--cubic-bezier);
-    @include mobile{
-        padding: 88px 56px;
-        width: 688px;
-        height: 524px;
-    }
-}
-
-.modal-contacts{
-    padding: 88px 66px;
-    max-width: 768px;
-    min-height: 524px;
-    background-color: var(--main-btn-color);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    transition: var(--cubic-bezier);
-    @include mobile{
-        padding: 88px 26px;
         width: 688px;
         height: 524px;
     }
@@ -80,50 +46,35 @@
     padding: 0;
     cursor: pointer;
 }
-.modal-text{
-@include font(500, 56, 1.17);
-text-align: center;
-margin-bottom: 56px;
-color:var( --main-text-color);
-
-}
-
-.modal-text-contacts{
-    @include font(500, 56, 1.17);
-    text-align: center;
-    margin-bottom: 80px;
-    color:var( --main-text-color);   
-}
 
 .modal-text-order{
-@include font(500,56,1.17);
-text-align: center;
-
-color: var( --main-text-color);
-@include tablet{
-@include font(500, 64, 1.17);
+    @include font(500, 56, 1.17);
     text-align: center;
+    
     color: var( --main-text-color);
-}
-}
-
-.letsgo-btn{
-    padding: 16px 82px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 306px;
-    height: 50px;
-    @include font(700, 32, 1.18);
-    text-transform: uppercase;
-    margin: 0 auto;
-    color: var(--main-btn-color);
-    background-color: var(--second-btn-color);
-    cursor: pointer;
-    border: none;
-    border-radius: 16px;
-    transition: var(--cubic-bezier);
-
+    @include tablet{
+    @include font(500, 64, 1.17);
+        text-align: center;
+        color: var( --main-text-color);
+    }
+    }
+    
+    .letsgo-btn{
+        padding: 16px 82px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 306px;
+        height: 50px;
+        @include font(700, 32, 1.18);
+        text-transform: uppercase;
+        margin: 0 auto;
+        color: var(--main-btn-color);
+        background-color: var(--second-btn-color);
+        cursor: pointer;
+        border: none;
+        border-radius: 16px;
+        transition: var(--cubic-bezier);
 }
 
 .submit-btn{
@@ -144,6 +95,58 @@ color: var( --main-text-color);
     transition: var(--cubic-bezier);
 }
 
+
+
+// .modal-took-order{
+//     padding: 88px 80px;
+//     max-width: 768px;
+//     min-height: 524px;
+//     background-color: var(--main-btn-color);
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%) scale(1);
+//     transition: var(--cubic-bezier);
+//     @include mobile{
+//         padding: 88px 56px;
+//         width: 688px;
+//         height: 524px;
+//     }
+// }
+
+.modal-contacts{
+    padding: 88px 66px;
+    max-width: 768px;
+    min-height: 524px;
+    background-color: var(--main-btn-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: var(--cubic-bezier);
+    @include mobile{
+        padding: 88px 26px;
+        width: 688px;
+        height: 524px;
+    }
+}
+
+
+// .modal-text{
+// @include font(500, 56, 1.17);
+// text-align: center;
+// margin-bottom: 56px;
+// color:var( --main-text-color);
+
+// }
+
+.modal-text-contacts{
+    @include font(500, 56, 1.17);
+    text-align: center;
+    margin-bottom: 80px;
+    color:var( --main-text-color);   
+}
+
 .contacts-btn{
     padding: 16px 131px;
     display: flex;
@@ -160,5 +163,4 @@ color: var( --main-text-color);
     border: none;
     border-radius: 16px;
     transition: var(--cubic-bezier);
-
 }

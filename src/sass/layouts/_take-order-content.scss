@@ -185,14 +185,10 @@
     text-transform: capitalize;
 
     color: #ffffff;
-    &:focus {
-      color: #86e543;
-    }
   }
   &:focus,
   :hover {
-    outline: none;
-    border: 1px solid #2196f3;
+    border: #86e543;
   }
   @include tablet {
     width: 100%;
@@ -217,9 +213,7 @@
   line-height: 1.11;
   color: #ffffff;
   margin-bottom: 44px;
-  &:focus {
-    color: #2196f3;
-  }
+
   @include tablet {
     width: 100%;
   }

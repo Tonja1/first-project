@@ -1,0 +1,95 @@
+.backdrop{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+}
+
+.is-hidden{
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    }
+
+.modal-order1{
+    padding: 100px 44px; 
+    background-color: #01383A;
+    min-width: 272px;
+    // min-height: 395px; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include tablet{
+        max-width: 688px;
+        // min-height: 524px;
+        padding: 88px 40px;
+    }
+    @include desktop{
+        max-width: 768px;
+        // height: 524px;
+        padding: 88px 80px;
+    }
+} 
+
+
+.modal-btn {
+    padding: 10px;
+    width: 31px;
+    height: 31px;
+    border: 1.5px solid var(--accent-color);
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+    margin-bottom: 32px;
+}
+
+
+.modal-order1-text {
+@include font (500, 56, 1.17);
+min-width: 184px;
+text-align: center;
+color: #FFFFFF;
+margin-bottom: 32px;
+@include tablet{
+    max-width: 608px;
+    margin-bottom: 80px;
+}
+@include desktop{
+    @include font(500, 64, 1.17);
+    margin-bottom: 56px;
+
+} 
+}
+
+.letsgo-btn {
+    @include font(700, 16, 1.18);
+    padding: 16px 51px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 173px;
+    height: 50px; 
+    text-transform: uppercase;
+    margin: 0 auto;
+    color: var(--main-btn-color); 
+    background-color: var(--second-btn-color); 
+    cursor: pointer;
+    border: none;
+    border-radius: 16px;
+    transition: var(--cubic-bezier); 
+    @include tablet{
+        width: 306px;
+        padding: 16px 82px; 
+        @include font(700, 32, 1.18); 
+    }
+    
+}

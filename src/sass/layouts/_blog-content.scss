@@ -1,4 +1,8 @@
 .blog {  
+  background-color: var(--background-color);
+}
+.blog-page {
+  padding: 40px 0 48px;
   background-image: url("/src/images/blog-vector-26-mobile.png"),
         url("/src/images/blog-vector-27-mobile.png"),
         url("../images/background-mobile.jpg");
@@ -43,9 +47,6 @@
   @media screen and (max-width: 479px) {
     padding: 0;
   }
-}
-.blog-page {
-  padding: 40px 0 48px;
   @include tablet {
     padding: 120px 0;
   }

@@ -1,5 +1,45 @@
-.blog {
-  background-color: #01383a;
+.blog {  
+  background-image: url("/src/images/blog-vector-26-mobile.png"),
+        url("/src/images/blog-vector-27-mobile.png"),
+        url("../images/background-mobile.jpg");
+    
+    background-repeat: no-repeat;
+    background-size:100%, 100%, cover;
+    background-position: top 50px left 0px, top 54px left 0px, center;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @include retina {
+        background-image: url("/src/images/blog-vector-26-mobile-2x.png"),
+            url("/src/images/blog-vector-27-mobile-2x.png"),
+            url("../images/background-mobile-2x.jpg");    
+    }
+    @include mobile {        
+        background-position: top 40px left 0px, top 48px left 0px, center;
+    }
+    @include tablet {        
+        padding-bottom: 120px;       
+        background-image: url("/src/images/blog-vector-24-tablet.png"),
+            url("/src/images/blog-vector-22-tablet.png"),
+            url("../images/background-tablet.jpg");
+        background-position: top 169px left 0px, top 177px left 0px, center;
+        @include retina {
+            background-image: url("/src/images/blog-vector-24-tablet-2x.png"),
+                url("/src/images/blog-vector-22-tablet-2x.png"),
+                url("../images/background-tablet-2x.jpg");        
+        }
+    }
+    @include desktop {        
+        background-image: url("/src/images/blog-vector-24-desktop.png"),
+            url("/src/images/blog-vector-22-desktop.png"),
+            url("../images/background-desktop-3.jpg");
+        background-position: top 169px left 0px, top 177px left 0px, bottom 0px left 0px;
+        @include retina {
+            background-image: url("/src/images/blog-vector-24-desktop-2x.png"),
+                url("/src/images/blog-vector-22-desktop-2x.png"),
+                url("../images/background-desktop-3-2x.jpg");
+        }
+    }    
   @media screen and (max-width: 479px) {
     padding: 0;
   }
@@ -8,6 +48,22 @@
   padding: 40px 0 48px;
   @include tablet {
     padding: 120px 0;
+  }
+}
+.blog-title {
+  margin-left: 16px;
+  margin-bottom: 31px;
+  @include font (500, 24, 1.667);
+  color: var(--main-title-color);
+  @include tablet {
+    font-size: 56px;
+    line-height: 1.1785;
+    margin-left: 59px;
+    margin-bottom: 67px;
+  }
+  @include desktop {
+    margin-left: 102px;
+    margin-bottom: 75px;
   }
 }
 
@@ -19,12 +75,12 @@
     font-size: 24px;
     line-height: 1;
 
-    picture {
-      img {
-        border-radius: 12px;
-        overflow: hidden;
-      }
+  picture {
+    img {
+      border-radius: 12px;
+      overflow: hidden;
     }
+  }
 
     &__tablet {
       display: flex;
@@ -78,9 +134,8 @@
     }
   }
 
-  h2 {
-    font-size: 24px;
-    line-height: 1.17;
+  h3 {
+    @include font (500, 24px, 1.667);
     margin-bottom: 16px;
     @include tablet {
       font-size: 56px;
@@ -138,5 +193,32 @@
     a {
       color: var(--accent-color);
     }
+  }
+}
+.blog-list-title {
+  @media screen and (max-width: 479px) {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+.blog-list__author {
+  @media screen and (max-width: 479px) {
+    margin-left: 16px;
+  }
+}
+.blog-list__date {
+  @media screen and (max-width: 479px) {
+    margin-left: 16px;
+  }
+}
+p {
+  @media screen and (max-width: 479px) {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+.blog-link {
+  @media screen and (max-width: 479px) {
+    margin-right: 16px;
   }
 }

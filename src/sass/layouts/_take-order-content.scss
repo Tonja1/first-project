@@ -1,9 +1,17 @@
 .take {
+<<<<<<< Updated upstream
   padding-top: 40px;
   padding-bottom: 48px;
   max-width: 480px;
   margin: 0 auto;
   background-image: url(../images/background-mobile.jpg);
+=======
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 64px;
+  background-image: url(../images/background-mobile.jpg);
+  background-size: cover;
+>>>>>>> Stashed changes
 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -33,6 +41,7 @@
     }
   }
 }
+<<<<<<< Updated upstream
 .take-order {
   width: 288px;
   padding-left: 0;
@@ -50,6 +59,24 @@
   font-size: 24px;
   line-height: 1.16;
   margin-bottom: 40px;
+=======
+.take-container {
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.take-order-content {
+  align-items: center;
+}
+
+.take-order-title-mob {
+  display: inline;
+  font-size: 24px;
+  line-height: 1.16;
+  padding-bottom: 35px;
+>>>>>>> Stashed changes
   color: #ffffff;
   @include tablet {
     font-weight: 500;
@@ -62,16 +89,25 @@
     margin-bottom: 75px;
   }
 }
+<<<<<<< Updated upstream
 @include desktop {
 }
 
 .take-order-subtitle {
   font-weight: 500;
+=======
+
+.take-order-subtitle {
+>>>>>>> Stashed changes
   font-size: 32px;
   line-height: 1.18;
 
   margin-bottom: 16px;
+<<<<<<< Updated upstream
   width: 320px;
+=======
+  max-width: 320px;
+>>>>>>> Stashed changes
   color: #ffffff;
   @include tablet {
     font-weight: 500;
@@ -90,6 +126,7 @@
 .order-mob {
   display: flex;
   flex-wrap: wrap;
+<<<<<<< Updated upstream
   margin-bottom: 16px;
   @include tablet {
     flex-wrap: nowrap;
@@ -98,6 +135,10 @@
   @include desktop {
     display: none;
   }
+=======
+  justify-content: center;
+  max-width: 480px;
+>>>>>>> Stashed changes
 }
 
 .img-mob-one {
@@ -105,6 +146,7 @@
 }
 
 .order-mob-price {
+<<<<<<< Updated upstream
   display: flex;
   gap: 50px;
 
@@ -115,9 +157,14 @@
   @include desktop {
     display: none;
   }
+=======
+  margin-top: 16px;
+  display: flex;
+  gap: 50px;
+  margin-bottom: 16px;
+>>>>>>> Stashed changes
 }
 .order-price-one {
-  font-weight: 500;
   font-size: 16px;
   line-height: 100%;
   text-decoration-line: line-through;
@@ -139,7 +186,9 @@
 }
 .pictures-mob {
   display: flex;
+  justify-content: center;
   gap: 16px;
+<<<<<<< Updated upstream
   margin-bottom: 32px;
   @include tablet {
     gap: 24px;
@@ -148,6 +197,9 @@
   @include desktop {
     display: none;
   }
+=======
+  padding-bottom: 16px;
+>>>>>>> Stashed changes
 }
 .pictures-link {
   border-radius: 4px;
@@ -168,21 +220,31 @@
 .order-input {
   width: 288px;
   height: 24px;
-  left: 0px;
   background: transparent;
   border: transparent;
   border-bottom: 1px solid #86e543;
   margin-bottom: 44px;
+<<<<<<< Updated upstream
   font-weight: 400;
   font-size: 18px;
   line-height: 1.11;
   color: #ffffff;
 
+=======
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.11;
+  text-transform: capitalize;
+  outline: transparent;
+  color: #ffffff;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+>>>>>>> Stashed changes
   &::placeholder {
     font-weight: 400;
     font-size: 18px;
     line-height: 1.11;
-    text-transform: capitalize;
 
     color: #ffffff;
     &:focus {
@@ -223,8 +285,13 @@
   @include tablet {
     width: 100%;
   }
+  &:hover,
+  &:focus {
+    border-top: inherit;
+  }
 }
 
+<<<<<<< Updated upstream
 .order-choice {
   position: relative;
 }
@@ -386,4 +453,59 @@
     display: flex;
     gap: 20px;
   }
+=======
+.order-choice-select {
+  display: block;
+  position: relative;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #ffffff;
+  background: transparent;
+  width: 288px;
+  height: 24px;
+  border: none;
+  border-bottom: 1px solid #86e543;
+  margin-bottom: 44px;
+
+  outline: transparent;
+  color: #ffffff;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.select-wrapper {
+  background: #01383a;
+}
+
+.wrap-down-icon {
+  position: absolute;
+  top: 20%;
+  left: 270px;
+  z-index: 2;
+}
+
+.choice-wrap {
+  position: relative;
+}
+
+// .order-choice-select:focus {
+//   background-color:  #01383A;
+// }
+.order-choice-select:focus {
+  background: #01383a;
+  & .wrap-down-icon {
+    display: none;
+  }
+}
+// .choice-list:hover{
+//   background-color:
+// }
+.order-choice-select:focus::before {
+  width: 5px;
+  height: 5px;
+  border-color: aliceblue;
+>>>>>>> Stashed changes
 }

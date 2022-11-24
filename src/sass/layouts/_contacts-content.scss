@@ -1,0 +1,232 @@
+.html {
+    box-sizing: border-box;
+}
+
+// *,
+// *::before,
+// *::after {}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+section {
+    width: 320px;
+    font-family: "Roboto", sans-serif;
+    background-image: url(../img/Frame-4522-tab-1x.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 15px;
+}
+
+.canvas {
+    top: 0;
+    left: 0;
+    /* width: 1280px;
+  height: 400px;
+  padding: 200px; */
+
+    background-image: url("./img.contacts-vector-27-mobile.png"),
+        url("./img.contacts-vector-27-mobile-2x.png"),
+        url("./img/Frame-4522-mob-1x.jpg");
+
+    background-size: 1280px, 1280px;
+    background-repeat: no-repeat;
+    background-position: top 120px left 0px, top 112px left 0px, top 0px left 0px;
+}
+
+.subtitle {
+    width: 97px;
+    height: 28px;
+    left: 16px;
+    margin-bottom: 35px;
+
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.17;
+
+    color: #ffffff;
+}
+
+.feedback {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19;
+
+    color: #ffffff;
+    width: 288px;
+    height: 76px;
+}
+
+.feedbac__text {
+    margin-bottom: 24px;
+}
+
+.contacts__list {
+    width: 147px;
+    margin-bottom: 24px;
+}
+
+.contacts__link {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19;
+    color: #8d9289;
+}
+
+.mail {
+    color: #ffffff;
+}
+
+.contacts__link:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.contacts__tel {
+    width: 147px;
+    margin-bottom: 24px;
+}
+
+.contacts__num {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19;
+    color: #8d9289;
+}
+
+.text {
+    color: #ffffff;
+}
+
+.contacts__num:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.registr__form {
+    width: 145px;
+    /* height: 28px; */
+    left: 17px;
+}
+
+.registr__form__title {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.17;
+    margin-bottom: 16px;
+    color: #86e543;
+}
+
+.registr__form__group {
+    width: 298px;
+    margin-bottom: 24px;
+}
+
+.registr__field {
+    display: block;
+    position: relative;
+}
+
+.registr__lable {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    display: block;
+    text-align: left;
+    text-transform: capitalize;
+
+    margin-bottom: 4px;
+    color: #ffffff;
+}
+
+.registr__input {
+    width: 100%;
+    height: 24px;
+    background: transparent;
+    border: transparent;
+    border-bottom: 1px solid #86e543;
+    margin-bottom: 44px;
+}
+
+.registr__input ::placeholder {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.25;
+    color: #ffffff;
+}
+
+.registr__message {
+    width: 100%;
+    background: transparent;
+    border: transparent;
+    border: 1px solid #86e543;
+}
+
+.registr__message ::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.14;
+    color: #ffffff;
+}
+
+.registr__btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 20px;
+    gap: 10px;
+    background: transparent;
+    width: 173px;
+    height: 51px;
+    border: 1px solid #ffffff;
+    border-radius: 16px;
+
+    margin-left: 60px;
+}
+
+.registr__btn__text {
+    width: 41px;
+    height: 19px;
+
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: right;
+    text-transform: uppercase;
+
+    color: #ffffff;
+}

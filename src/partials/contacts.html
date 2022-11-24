@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="../sass/layouts/_contacts-content.scss" />
+    <title>Contacts</title>
+  </head>
+  <section class="contacts">
+    <h2 class="subtitle">Contacts</h2>
+    <div class="canvas"></div>
+    <picture>
+      <source
+        srcset="
+          ./img/contacts-desktop-1x.jpg 1x,
+          ./img/contacts-desktop-2x.jpg 2x
+        "
+        media="(min-width=1280)"
+      />
+      <source
+        srcset="
+              ./img/Rectangle 4279-tablet-1x.jpg 1x, 
+              ./img/Rectangle 4279-tablet-1x.jpg 2x"
+        media="(min-width=768)"
+      />
+      <source
+        srcset="./img/Rectangle 4279-mobile-1x.jpg 1x, 
+                ./img/Rectangle 4279-mobile-1x.jpg 2x"
+        media="(max-width=767)"
+      />
+      <img src="./img/contacts-mobile-1x.jpg" alt="restangle" width="320" />
+    </picture>
+    <ul class="feedback">
+      <li class="feedbac__text">
+        <p>
+          In case of queries about order handling and/or delay, drop us an email
+          at
+        </p>
+      </li>
+      <li class="feedbac__text"><p>info@shopforgamers.com</p></li>
+    </ul>
+
+    <ul class="contacts__list">
+      <li class="contacts__link mail">Email</li>
+
+      <li class="contacts__link">
+        <a href="mailto:info@devstudio.com"></a>sfg.info@gmail.com
+      </li>
+    </ul>
+
+    <ul class="contacts__tel">
+      <li class="contacts__num text">Phone number</li>
+      <li class="contacts__num">
+        <a href="tel:+380936432288"></a>+38 (093) 643 22 88
+      </li>
+      <li class="contacts__num">
+        <a href="tel:+380503454423"></a>+38 (050) 345 44 23
+      </li>
+    </ul>
+    <form class="registr__form" name="registr-form">
+      <p class="registr__form__title">CONTACT US</p>
+      <div class="registr__form__group" role="group">
+        <label class="registr__field">
+          <input
+            type="text"
+            class="registr__input"
+            name="name"
+            id="name"
+            placeholder="Name"
+            required
+          />
+        </label>
+        <label class="registr__field">
+          <input
+            type="email"
+            class="registr__input"
+            name="email"
+            id="email-id"
+            placeholder="Email"
+            required
+          />
+        </label>
+        <label class="registr__field">
+          <span class="registr__lable">Leave your message</span>
+          <textarea
+            class="registr__message"
+            rows="5"
+            placeholder=" "
+          ></textarea>
+        </label>
+      </div>
+      <button class="registr__btn" type="submit">
+        <span class="registr__btn__text">SEND</span>
+      </button>
+    </form>
+  </section>
+</html>

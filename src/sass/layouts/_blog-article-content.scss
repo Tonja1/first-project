@@ -1,112 +1,80 @@
+.article {
+    
+}
 
 .container-article{
+    background-image: url("/src/images/blog-vector-26-mobile.png"),
+            url("/src/images/blog-vector-27-mobile.png");
+    
+        background-repeat: no-repeat;
+        background-size: 100%, 100%;
+        background-position: top 75px left 0px, top 79px left 0px;
+    
+        @include retina {
+            background-image: url("/src/images/blog-vector-26-mobile-2x.png"),
+                url("/src/images/blog-vector-27-mobile-2x.png");
+        }
+    
+        @include mobile {
+            background-position: top 65px left 0px, top 73px left 0px;
+        }
+    
+        @include tablet {
+            background-image: url("/src/images/blog-vector-24-tablet.png"),
+                url("/src/images/blog-vector-22-tablet.png");
+            background-position: top 236px left 0px, top 244px left 0px;
+    
+            @include retina {
+                background-image: url("/src/images/blog-vector-24-tablet-2x.png"),
+                    url("/src/images/blog-vector-22-tablet-2x.png");
+            }
+        }
+    
+        @include desktop {
+            background-image: url("/src/images/blog-vector-24-desktop.png"),
+                url("/src/images/blog-vector-22-desktop.png");
+            background-position: top 160px left 0px, top 168px left 0px;
+    
+            @include retina {
+                background-image: url("/src/images/blog-vector-24-desktop-2x.png"),
+                    url("/src/images/blog-vector-22-desktop-2x.png");
+            }
+        }
     background-color: var(--background-color);
     color: var(--main-title-color);
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 40px;
     padding-bottom: 48px;
     @include mobile {
-        padding-top: 20px;
         padding-left: 40px;
         padding-right: 40px;
     }
     @include tablet {
-        padding-top: 24px;
+        padding-top: 120px;
         padding-bottom: 120px;
     }
     @include desktop {
-    padding-bottom: 120px;
-     padding-top: 16px;
+        padding-top: 112px;
+        padding-bottom: 120px;
     }    
 }
-
-
-.conva{
-
-    background-image:url("../images/blog-article-vector-27-mobile.png"), 
-    url("../images/blog-article-vector-26-mobile.png");
-    padding-top: 40px;
-    width: 100%;
-    height: 130px;
-    margin: 0 auto;
-    align-content: center;
-    background-size: 320px, 320px, cover;
-    background-repeat: no-repeat;
-    background-position: top 80px left 0px, top 76px left 0px;
-    background-color: var(--background-color); 
-    
-    
-
-    @include retina{
-    background-image:url("../images/blog-article-vector-27-mobile-2x.png"), 
-    url("../images/blog-article-vector-26-mobile-2x.png");
-    background-size: 100%, 100%, cover;
-    background-repeat: no-repeat;
-    background-position: top 80px left 0px, top 76px left 0px;
-
-    }
-    @media screen and (max-width: 479px) {
-    background-color:var(--background-color);
-    padding-top: 40px;
-    width: 100%;
-    }
-    @include mobile {
-        width: 480px;
-        height: 130px;
-        margin: auto;
-        text-align: center;
-        background-image:url("../images/blog-article-vector-27-mobile.png"), 
-        url("../images/blog-article-vector-26-mobile.png");
-
-        background-image:url("../images/blog-article-vector-27-mobile-2x.png"), 
-        url("../images/blog-article-vector-26-mobile-2x.png");
-        background-size: 100%, 100%, cover;
-    background-repeat: no-repeat;
-    background-position: top 80px left 0px, top 76px left 0px;
-    }
-
-    @include tablet{
-    padding-top: 120px;
-    width: 768px;
-    height: 304px; 
-    background-image: url("../images/blog-article-vector-22-tablet.png"),      
-    url("../images/blog-article-vector-24-tablet.png"), 
-    url("../images/blog-article-vector-22-tablet-2x.png"),      
-    url("../images/blog-article-vector-24-tablet-2x.png") ;
-    background-size: 768px, 768px, cover;
-    background-repeat: no-repeat;
-    background-position: top 256px left 0px, top 249px left 0px, top 256px left 0px, top 249px left 0px;
-}
-@include desktop{
-padding-top: 112px;
- width: 1280px;
-height: 230px;   
-background-image: url("../images/blog-article-vector-22-desktop.png"),      
-url("../images/blog-article-vector-24-desktop.png"), url("../images/blog-article-vector-22-desktop-2x.png"),      
-url("../images/blog-article-vector-24-desktop-2x.png") ;
-background-size: 1280px, 1280px, cover;
-background-repeat: no-repeat;
-background-position: top 182px left 0px, top 174px left 0px, top 182px left 0px, top 174px left 0px;
-}
-}
-
-
 .article-title{
-padding-left: 16px;
-font-family: 'Roboto';
-font-style: normal;
-color: var(--main-title-color);
-@include font(500, 24px, 1.16);
-@include tablet {
-@include font(500, 56px, 1);
-padding-left: 40px;
-padding-bottom: 24px;
-}
-@include desktop {
-@include font(600, 56px, 1);
-padding-left: 40px;
-padding-bottom: 16px;
-}
+    margin-bottom: 31px;
+    margin-left: 16px;
+    color: var(--main-title-color);
+    @include font(500, 24px, 1.16);
+    @include mobile {
+        margin-left: 0;
+    }
+    @include tablet {
+        font-size: 56px;
+        line-height: 1;
+        margin-bottom: 72px;
+    }
+    @include desktop {  
+        margin-bottom: 59px;
+    }
 }
 .article-game{
    width: 100%;
@@ -116,7 +84,7 @@ padding-bottom: 16px;
 }
     @include mobile {
         width: 400px;
-        height: 316px;
+        height: 360px;
     }
     @include tablet {
         width: 688px;
@@ -132,15 +100,18 @@ padding-bottom: 16px;
         display: block;
         border-radius: 12px;  
       
-        @media screen and (maw-width: 479px) {
+        @media screen and (max-width: 479px) {
         width: 100%;}
         @include mobile {
-        width: 320px;
-         height: 228px; }
-         @include tablet {
-         width: 387px;
+        width: 100%;
+        // height: 228px; 
+    }
+        @include tablet {
+        width: 387px;
         height: 228px; 
-        border-radius: 12px;}   
+        border-radius: 12px;
+        overflow: hidden;
+    }   
          @include desktop {
         width: 387px;
         height: 384px;
@@ -256,4 +227,15 @@ padding-bottom: 16px;
 }
 .article-margin-li{
     margin-left: 30px;
+}
+.article-text {
+    @media screen and (max-width: 479px) {
+    padding-left: 16px;
+}
+}
+.article-text-property {
+    @media screen and (max-width: 479px) {
+    padding-left: 16px;
+    padding-right: 16px;
+}
 }

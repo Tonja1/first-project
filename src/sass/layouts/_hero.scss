@@ -1,0 +1,204 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+address {
+    font-style: normal;
+}
+
+img {
+    display: block;
+}
+
+body {
+    margin: 0 auto;
+}
+
+.hero {
+    position: relative;
+    width: 100vw;
+    padding-top: 180px;
+    padding-bottom: 127px;
+    background-image: url(/src/images/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: 70%;
+    background-size: cover;
+    @media screen and (min-width: 768px) {
+        padding-top: 154px;
+        padding-bottom: 208px;
+        background-position: center;
+    }
+    @media screen and (min-width: 1280px) {
+        padding-top: 180px;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 40px;
+    @media screen and (min-width: 480px) {
+        width: 480px;
+    }
+    @media screen and (min-width: 768px) {
+        width: 768px;
+    }
+    @media screen and (min-width: 1280px) {
+        width: 1280px;
+    }
+}
+
+    .hero__icon1 {
+            position: absolute;
+            top: 58px;
+            left: 45px;
+            transform: rotate(-29deg);
+            mix-blend-mode: luminosity;
+            @media screen and (min-width: 768px) {
+                top: 49px;
+                right: 165px;
+                left: auto;
+                width: 100px;
+                transform: rotate(-31.92deg);
+            }
+            @media screen and (min-width: 1280px) {
+                top: 64px;
+                right: 458px;
+                width: 133px;
+                transform: rotate(-34px);
+            }
+        }
+    
+        .hero__icon2 {
+            position: absolute;
+            top: -25px;
+            right: -7px;
+            transform: rotate(28deg);
+            mix-blend-mode: luminosity;
+            @media screen and (min-width: 768px) {
+                top: 226px;
+                right: 20px;
+                left: auto;
+                width: 180px;
+                transform: rotate(10.77deg);
+            }
+            @media screen and (min-width: 1280px) {
+                top: 154px;
+                right: 91px;
+                width: 270px;
+                transform: rotate(18px);
+            }
+        }
+    
+        .hero__icon3 {
+            position: absolute;
+            bottom: 25px;
+            right: 75px;
+            transform: rotate(24deg);
+            mix-blend-mode: luminosity;
+            @media screen and (min-width: 768px) {
+                    bottom: 128px;
+                    right: 188px;
+                    width: 143px;
+                    transform: rotate(21.68deg);
+                }
+            @media screen and (min-width: 1280px) {
+                bottom: 82px;
+                right: 447px;
+                width: 230px;
+                transform: rotate(30px);
+            }
+            }
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    @media screen and (min-width: 768px) {
+            align-items: baseline;
+            gap: 94px;
+        }
+    @media screen and (min-width: 1280px) {
+        gap: 56px;
+        padding: 0 100px;
+    }
+}
+
+.hero__title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.18;
+    text-align: center;
+    color: #FFFFFF;
+    @media screen and (min-width: 768px) {
+            width: 388px;
+            font-size: 56px;
+            line-height: 1.17;
+            text-align: start;
+        }
+    @media screen and (min-width: 1280px) {
+        font-size: 64px;
+        line-height: 1.18;
+    }
+    .title-br {
+        @media screen and (min-width: 768px) {
+            display: none;
+            }
+    }
+}
+
+.hero__link {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.18;
+    text-transform: uppercase;
+    color: #01383A;
+    @media screen and (min-width: 768px) {
+        font-size: 32px;
+        line-height: 1.18;
+    }
+}
+
+.hero__btn {
+    padding: 16px 20px;
+    background: #86E543;
+    border-radius: 16px;
+    &:hover {
+        box-shadow: 0px 8px 20px rgba(134, 229, 67, 0.5),
+        0px 4px 10px rgba(255, 255, 255, 0.1);
+    }
+}

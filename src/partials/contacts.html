@@ -1,47 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"
-    />
-    <link rel="stylesheet" href="../sass/layouts/_contacts-content.scss" />
-    <title>Contacts</title>
-  </head>
   <section class="contacts">
     <h2 class="subtitle">Contacts</h2>
     <div class="canvas"></div>
     <picture>
       <source
         srcset="
-          ./img/contacts-desktop-1x.jpg 1x,
-          ./img/contacts-desktop-2x.jpg 2x
+          ./images/contacts-desktop.jpg 1x,
+          ./images/contacts-desktop-2x.jpg 2x
         "
         media="(min-width=1280)"
       />
       <source
         srcset="
-              ./img/Rectangle 4279-tablet-1x.jpg 1x, 
-              ./img/Rectangle 4279-tablet-1x.jpg 2x"
+              ./images/contacts-tablet.jpg 1x, 
+              ./images/contacts-tablet-2x.jpg 2x"
         media="(min-width=768)"
       />
       <source
-        srcset="./img/Rectangle 4279-mobile-1x.jpg 1x, 
-                ./img/Rectangle 4279-mobile-1x.jpg 2x"
+        srcset="./images/contacts-mobile.jpg 1x, 
+                ./images/contacts-mobile-2x.jpg 2x"
         media="(max-width=767)"
       />
-      <img src="./img/contacts-mobile-1x.jpg" alt="restangle" width="320" />
+      <img src="./images/contacts-mobile.jpg" alt="restangle"/>
     </picture>
     <ul class="feedback">
       <li class="feedbac__text">
@@ -57,17 +36,17 @@
       <li class="contacts__link mail">Email</li>
 
       <li class="contacts__link">
-        <a href="mailto:info@devstudio.com"></a>sfg.info@gmail.com
+        <a href="mailto:info@devstudio.com">sfg.info@gmail.com</a>
       </li>
     </ul>
 
     <ul class="contacts__tel">
       <li class="contacts__num text">Phone number</li>
       <li class="contacts__num">
-        <a href="tel:+380936432288"></a>+38 (093) 643 22 88
+        <a href="tel:+380936432288">+38 (093) 643 22 88</a>
       </li>
       <li class="contacts__num">
-        <a href="tel:+380503454423"></a>+38 (050) 345 44 23
+        <a href="tel:+380503454423">+38 (050) 345 44 23</a>
       </li>
     </ul>
     <form class="registr__form" name="registr-form">
@@ -107,4 +86,3 @@
       </button>
     </form>
   </section>
-</html>

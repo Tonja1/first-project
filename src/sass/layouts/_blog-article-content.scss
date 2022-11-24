@@ -13,9 +13,7 @@
     }
     @media screen and (max-width: 479px) {
         padding-left: 16px;
-        padding-right: 16px;
-
-            }
+        padding-right: 16px;}
 }
 img{
     width: 100%;
@@ -130,16 +128,13 @@ padding-bottom: 16px;
         border-radius: 12px;  
         @media screen and (maw-width: 480px) {
         width: 100%;}
-
         @include mobile {
         width: 320px;
          height: 228px; }
-         
          @include tablet {
          width: 387px;
         height: 228px; 
         border-radius: 12px;}   
-
          @include desktop {
         width: 387px;
         height: 384px;
@@ -148,9 +143,6 @@ padding-bottom: 16px;
         border-radius: 12px; 
         overflow: hidden;
                 } 
-        
-    
-        
     }
     .article-text{
         width: 288px;
@@ -164,7 +156,6 @@ padding-bottom: 16px;
         @include desktop {
           width: 690px;  
         }}
-
 .article-data{
     padding-top: 20px;
     @include tablet {
@@ -190,7 +181,6 @@ padding-bottom: 16px;
     @include font(500, 24px, 1);
     color: var(--second-text-color);
                 }
-
 }
 .article-data-item2{
     @include font(500, 16px, 1);
@@ -206,9 +196,6 @@ padding-bottom: 16px;
      @include font(500, 24px, 1);
      color:var(--data-text-color);} 
 }
-
-
-
 .text-v{
     display: none;
     @include desktop{
@@ -258,8 +245,6 @@ padding-bottom: 16px;
     color: var(--second-text-color);}
      @include desktop{ 
      @include font(400, 24px, 1.16);
-
-    //  color: #86E543;
      color: var(--second-text-color);
     }
 }

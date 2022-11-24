@@ -2,7 +2,7 @@
 .container-article{
     background-color: var(--background-color);
     color: var(--main-title-color);
-    padding-bottom: 0px;
+    padding-bottom: 48px;
     @include tablet {
         padding-top: 24px;
         padding-bottom: 120px;
@@ -13,7 +13,15 @@
     }
     @media screen and (max-width: 479px) {
         padding-left: 16px;
-        padding-right: 16px;}
+        padding-right: 16px;
+        padding-bottom: 48px;
+    }
+
+
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+  padding-top: 20px;
+       
+      }
 }
 img{
     width: 100%;
@@ -109,6 +117,10 @@ padding-bottom: 16px;
 }
 .article-game{
    width: 100%;
+   @media screen and (max-width: 479px) {
+    padding-left: 0x;
+    padding-right: 0px;
+}
     @include mobile {
         width: 400px;
         height: 316px;
@@ -126,7 +138,8 @@ padding-bottom: 16px;
     .article-photo{
         display: block;
         border-radius: 12px;  
-        @media screen and (maw-width: 480px) {
+      
+        @media screen and (maw-width: 479px) {
         width: 100%;}
         @include mobile {
         width: 320px;

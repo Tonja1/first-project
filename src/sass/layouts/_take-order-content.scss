@@ -117,6 +117,7 @@
   }
 }
 .order-price-one {
+  font-weight: 500;
   font-size: 16px;
   line-height: 100%;
   text-decoration-line: line-through;
@@ -138,7 +139,6 @@
 }
 .pictures-mob {
   display: flex;
-  justify-content: center;
   gap: 16px;
   margin-bottom: 32px;
   @include tablet {
@@ -168,6 +168,7 @@
 .order-input {
   width: 288px;
   height: 24px;
+  left: 0px;
   background: transparent;
   border: transparent;
   border-bottom: 1px solid #86e543;
@@ -181,6 +182,7 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 1.11;
+    text-transform: capitalize;
 
     color: #ffffff;
     &:focus {
@@ -221,10 +223,6 @@
   @include tablet {
     width: 100%;
   }
-  &:hover,
-  &:focus {
-    border-top: inherit;
-  }
 }
 
 .order-choice {
@@ -236,6 +234,7 @@
   top: 50%;
   transform: translateY(-50%);
   left: 270px;
+  fill: #ffffff;
   @include tablet {
     left: 670px;
   }
@@ -308,8 +307,8 @@
   }
   &:hover,
   &:focus {
-    box-shadow: 0px 8px 20px rgba(134, 229, 67, 0.5),
-      0px 4px 10px rgba(255, 255, 255, 0.1);
+    filter: drop-shadow(0px 4px 10px rgba(134, 229, 67, 0.1))
+      drop-shadow(0px 4px 20px rgba(134, 229, 67, 0.4));
     border-radius: 16px;
   }
 }
@@ -338,8 +337,8 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
-    drop-shadow (0px 4px 10px rgba(134, 229, 67, 0.1))
-      drop-shadow(0px 4px 20px rgba(134, 229, 67, 0.4));
+    box-shadow: (0px 4px 10px rgba(134, 229, 67, 0.1))
+      (0px 4px 20px rgba(134, 229, 67, 0.4));
     border-radius: 16px;
   }
 }

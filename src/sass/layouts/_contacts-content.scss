@@ -1,51 +1,117 @@
 .contacts {
     background-color: var(--background-color);
 }
-
-.subtitle {
-    width: 97px;
-    height: 28px;
-    left: 16px;
-    margin-bottom: 35px;
-
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 1.17;
-
-    color: #ffffff;
+.contacts-div {
+    padding-top: 40px;
+    padding-bottom: 48px;
+    padding-left: 0;
+    padding-right: 0;
+    @include mobile {
+        padding-left: 40px;
+        padding-right: 40px;
+    }      
 }
+.subtitle {
+    margin-bottom: 35px;
+    @media screen and (max-width: 479px) {
+            margin-left: 16px;
+        }
+    @include font (500, 24, 1.17);
+    color: var(--main-title-color);
+    @include tablet {
+        font-size: 56px;
+        line-height: 1.785;
+        margin-bottom: 67px;
+    }
+    @include desktop {
+        margin-bottom: 75px;
+    }
 
+}
+.canvas {
+    @include tablet {
+        height: 346px;
+        margin-bottom: 32px;
+    }
+    @include desktop {
+        margin-bottom: 0;
+    }
+}
+.contacts-desktop {
+    @include desktop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+.contacts-ul {
+    @include desktop {
+        margin-top: 60px;
+    }
+}
 .feedback {
     margin-top: 16px;
     margin-bottom: 24px;
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.19;
 
     color: #ffffff;
-    width: 288px;
-    height: 76px;
+    @media screen and (max-width: 479px) {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    @include tablet {
+        width: 488px;
+        @include font (400, 24, 1.17);
+    }
+    @include desktop {
+    margin-bottom: 40px;
+    }
 }
 
 .feedbac__text {
-    margin-bottom: 24px;
+    margin-bottom: 24px;    
+    
 }
 
 .contacts__list {
-    width: 147px;
+    // width: 147px;
     margin-bottom: 24px;
+    @media screen and (max-width: 479px) {
+            margin-left: 16px;
+        }
+    @include tablet {
+        display: flex;
+        gap: 32px;
+    }
+    @include desktop {
+        flex-direction: column;
+        gap: 40px;
+    }
 }
 
 .contacts__link {
-    font-family: "Roboto";
-    font-style: normal;
+    
     font-weight: 400;
     font-size: 16px;
     line-height: 1.19;
     color: #8d9289;
+    @include tablet {
+        @include font (400, 24, 1.17);
+    }
+}
+.contacts__avp {
+@media screen and (max-width: 767px) {
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 24px;
+}
+}
+.contacts__auk {    
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 .mail {
@@ -61,13 +127,14 @@
     margin-bottom: 24px;
 }
 
-.contacts__num {
-    font-family: "Roboto";
-    font-style: normal;
+.contacts__a {    
     font-weight: 400;
     font-size: 16px;
     line-height: 1.19;
     color: #8d9289;
+    @include tablet {
+            @include font (400, 24, 1.17);
+        }
 }
 
 .text {
@@ -79,24 +146,56 @@
 }
 
 .registr__form {
-    width: 145px;
+    // width: 145px;
     /* height: 28px; */
-    left: 17px;
+    // left: 17px;
+    // @media screen and (max-width: 1279px) {
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items:center;
+    //     &:first-child {
+    //         align-items: flex-start;
+    //     } 
+    // }
+    @media screen and (max-width: 479px) {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    @include desktop {
+        margin-top: 58px;
+        width: 591px;
+    }
 }
 
 .registr__form__title {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 600;
+    display: block;
+    font-weight: 500;
     font-size: 24px;
     line-height: 1.17;
     margin-bottom: 16px;
     color: #86e543;
+    @include tablet {
+        margin-left: 48px;
+    }
+    @include desktop {
+        margin-left: 0;
+    }
 }
 
 .registr__form__group {
     width: 298px;
     margin-bottom: 24px;
+    @media screen and (max-width: 767px) {
+        width: 100%;
+    }
+    @include tablet {
+        width: 592px;
+        margin-left: 48px;
+    }
+    @include desktop {
+        width: 591px;
+        margin-left: 0;
+    }
 }
 
 .registr__field {
@@ -104,9 +203,7 @@
     position: relative;
 }
 
-.registr__lable {
-    font-family: "Roboto";
-    font-style: normal;
+.registr__lable {    
     font-weight: 400;
     font-size: 16px;
     line-height: 1.25;
@@ -127,7 +224,7 @@
     margin-bottom: 44px;
 }
 
-.registr__input ::placeholder {
+.registr__input::placeholder {
     font-weight: 400;
     font-size: 18px;
     line-height: 1.25;
@@ -136,6 +233,7 @@
 
 .registr__message {
     width: 100%;
+    height: 120px;
     background: transparent;
     border: transparent;
     border: 1px solid #86e543;
@@ -149,31 +247,37 @@
 }
 
 .registr__btn {
-    display: flex;
-    flex-direction: row;
+    text-align: center;
     justify-content: center;
     align-items: center;
-    padding: 16px 20px;
-    gap: 10px;
+    padding: 16px 66px;
     background: transparent;
     width: 173px;
     height: 51px;
     border: 1px solid #ffffff;
     border-radius: 16px;
-
-    margin-left: 60px;
+    margin: 0 auto;
+    display: block;
+    transition: var(--cubic-bezier);
+    &:hover {
+    filter: drop-shadow(0px 4px 10px rgba(255, 255, 255, 0.1)) drop-shadow(0px 4px 20px rgba(255, 255, 255, 0.4));
+    }
+    &:focus {
+    filter: drop-shadow(0px 4px 10px rgba(255, 255, 255, 0.1)) drop-shadow(0px 4px 20px rgba(255, 255, 255, 0.4));
+    }
+    @include desktop {
+        margin-left: 0;
+    }
 }
 
 .registr__btn__text {
     width: 41px;
     height: 19px;
 
-    font-family: "Roboto";
-    font-style: normal;
+    
     font-weight: 700;
     font-size: 16px;
-    line-height: 19px;
-    text-align: right;
+    line-height: 19px;    
     text-transform: uppercase;
 
     color: #ffffff;

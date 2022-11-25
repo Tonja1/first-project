@@ -122,27 +122,25 @@
   }
 }
 
-.btn-shop {
-  border-radius: 16px;
-  border: none;
-  background: #86e543;
-  display: none;
-
-  @include tablet {
-    display: flex;
-  }
-}
-.btn-shop:hover {
-	background-color: #86E543;
-	box-shadow: 0px 8px 20px rgba(134, 229, 67, 0.5), 0px 4px 10px rgba(255, 255, 255, 0.1);
-	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .btn-shop__link {
   font-family: var(--main-font);
   @include font(700, 14px, 1);
   color: #000000;
   padding: 16px 20px;
+  border-radius: 16px;
+  border: none;
+  background: #86e543;
+  display: none;
+  transition: var(--cubic-bezier);
+
+  @include tablet {
+    display: flex;
+  }
+  &:hover,
+  :focus {
+    box-shadow: 0px 8px 20px rgba(134, 229, 67, 0.5), 0px 4px 10px rgba(255, 255, 255, 0.1);
+  } 
+	
 }
 
 

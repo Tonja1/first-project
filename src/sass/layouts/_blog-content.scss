@@ -223,3 +223,52 @@ p {
     margin-right: 16px;
   }
 }
+.animation {
+  position: relative;  
+  @media screen and (max-width: 767px) {
+    margin-top: 48px;    
+    
+  }
+}
+.animation-list {
+  display: flex;
+  gap: 16px;
+
+  position: absolute;
+  // top: 50%;
+  left: 50%;
+}
+.animation-list-item {
+  width: 16px;
+  height: 16px;
+  border-radius: 30px;
+  background-color: white;
+
+  animation: 3s leftRight infinite;
+}
+
+.animation-list-item:first-child {
+  animation-delay: .30s;
+}
+
+.animation-list-item:nth-child(2) {
+  animation-delay: .60s;
+}
+
+.animation-list-item:nth-child(3) {
+  animation-delay: .90s;
+}
+
+@keyframes leftRight {
+  0% {
+    width: 16px;
+  }
+
+  50% {
+    width: 40px;
+  }
+
+  100% {
+    width: 16px;
+  }
+}

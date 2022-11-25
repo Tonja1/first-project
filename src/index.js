@@ -1,2 +1,4 @@
 import './menu';
-import './modal';
+import './contacts';
+import './buy';
+import './add';

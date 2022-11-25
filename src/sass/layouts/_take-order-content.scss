@@ -1,49 +1,71 @@
-.take {
-  padding-top: 40px;
-  padding-bottom: 48px;
-  max-width: 480px;
-  margin: 0 auto;
-  background-image: url(../images/background-mobile.jpg);
-
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url(../images/background-mobile-2x.jpg);
-  }
-  @include tablet {
-    max-width: 768px;
-    padding-top: 120px;
-    padding-bottom: 120px;
-    background-image: url(../images/background-tablet.jpg);
-
-    @include retina {
-      background-image: var(--bg-gradient),
-        url(../images/background-tablet-2x.jpg);
-    }
-  }
-  @include desktop {
-    max-width: 1280px;
-    padding-top: 120px;
-    padding-bottom: 120px;
-    background-image: url(../images/background-desktop-1.jpg);
-
-    @include retina {
-      background-image: var(--bg-gradient),
-        url(../images/background-desktop-1-2x.jpg);
-    }
-  }
+.take {  
+  background-color: var(--background-color);
 }
 .take-order {
-  width: 288px;
-  padding-left: 0;
-  padding-right: 0;
-  @include tablet {
-    width: 688px;
+  padding-top: 40px;
+  padding-bottom: 48px; 
+  padding-right: 16px;
+  padding-left: 16px;
+  @include mobile {
+    padding-right: 40px;
+    padding-left: 40px;
   }
-  @include desktop {
-    width: 1200px;
-  }
+  background-image: url("/src/images/sale-vector-21-mobile.png"),
+        url("/src/images/sale-vector-22-mobile.png"),
+        url("../images/background-mobile.jpg");
+    
+    background-repeat: no-repeat;
+    background-size:100%, 100%, cover;
+    background-position: top 47px left 0px, top 51px left 0px, center;
+    
+    
+    @include retina {
+        background-image: url("/src/images/sale-vector-21-mobile-2x.png"),
+            url("/src/images/sale-vector-22-mobile-2x.png"),
+            url("../images/background-mobile-2x.jpg");    
+    }
+    @include mobile {
+        padding-left: 40px;
+        padding-right: 40px;
+        background-position: top 37px left 0px, top 45px left 0px;
+    }
+    @include tablet {
+        padding-top: 120px;
+        padding-bottom: 120px;       
+        background-image: url("/src/images/sale-vector-21-tablet.png"),
+            url("/src/images/sale-vector-22-tablet.png"),
+            url("../images/background-tablet.jpg");
+        background-position: top 165px left 0px, top 173px left 0px, center;
+        @include retina {
+            background-image: url("/src/images/sale-vector-21-tablet-2x.png"),
+                url("/src/images/sale-vector-22-tablet-2x.png"),
+                url("../images/background-tablet-2x.jpg");        
+        }
+    }
+    @include desktop {        
+        background-image: url("/src/images/sale-vector-21-desktop.png"),
+            url("/src/images/sale-vector-22-desktop.png"),
+            url("../images/background-desktop-1.jpg");
+        background-position: top 165px left 0px, top 173px left 0px, top 0px right 0px;
+        @include retina {
+            background-image: url("/src/images/sale-vector-21-desktop-2x.png"),
+                url("/src/images/sale-vector-22-desktop-2x.png"),
+                url("../images/background-desktop-1-2x.jpg");
+        }
+    }    
+
+
+  // width: 288px;
+  // padding-left: 0;
+  // padding-right: 0;
+  // @include tablet {
+  //   width: 688px;
+  // }
+  // @include desktop {
+  //   width: 1200px;
+  // }
 }
+
 
 .take-order-title-mob {
   font-weight: 500;
@@ -55,10 +77,11 @@
     font-weight: 500;
     font-size: 56px;
     line-height: 1.18;
+    margin-left: 59px;
     margin-bottom: 51px;
   }
   @include desktop {
-    margin-left: 142px;
+    margin-left: 102px;
     margin-bottom: 75px;
   }
 }
@@ -86,6 +109,10 @@
 }
 .picture-one {
   margin-bottom: 16px;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+  
 }
 .order-mob {
   display: flex;
@@ -98,6 +125,9 @@
   @include desktop {
     display: none;
   }
+  // @media screen and (max-width: 767px) {
+  //   width: 100%;
+  // }
 }
 
 .img-mob-one {
@@ -106,7 +136,7 @@
 
 .order-mob-price {
   display: flex;
-  gap: 50px;
+  // gap: 50px;
 
   @include tablet {
     flex-direction: column;
@@ -114,6 +144,10 @@
   }
   @include desktop {
     display: none;
+  }
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    justify-content: space-between;
   }
 }
 .order-price-one {
@@ -190,8 +224,8 @@
   :hover {
     border: #86e543;
   }
-  @include tablet {
-    width: 100%;
+  @media screen and (max-width: 1279px) {
+    width: 100%;    
   }
   @include desktop {
     width: 590px;
@@ -200,7 +234,7 @@
 
 .order-choice-select {
   display: block;
-  width: 288px;
+  width: 100%;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -212,11 +246,7 @@
   font-size: 18px;
   line-height: 1.11;
   color: #ffffff;
-  margin-bottom: 44px;
-
-  @include tablet {
-    width: 100%;
-  }
+  margin-bottom: 44px;  
 }
 
 .order-choice {
@@ -227,14 +257,8 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 270px;
-  fill: #ffffff;
-  @include tablet {
-    left: 670px;
-  }
-  @include desktop {
-    left: 570px;
-  }
+  right: 0;
+  fill: #ffffff;  
 }
 
 .order-lable {

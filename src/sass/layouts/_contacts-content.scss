@@ -1,28 +1,6 @@
-section {
-    width: 320px;
-    font-family: "Roboto", sans-serif;
-    // background-image: url(../img/Frame-4522-tab-1x.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 15px;
+.contacts {
+    background-color: var(--background-color);
 }
-
-// .canvas {
-//     top: 0;
-//     left: 0;
-//     /* width: 1280px;
-//   height: 400px;
-//   padding: 200px; */
-
-//     background-image: url("./img.contacts-vector-27-mobile.png"),
-//         url("./img.contacts-vector-27-mobile-2x.png"),
-//         url("./img/Frame-4522-mob-1x.jpg");
-
-//     background-size: 1280px, 1280px;
-//     background-repeat: no-repeat;
-//     background-position: top 120px left 0px, top 112px left 0px, top 0px left 0px;
-// }
 
 .subtitle {
     width: 97px;

@@ -1,18 +1,18 @@
 .article {
-    
+    background-color: var(--background-color);
 }
 
 .container-article{
-    background-image: url("/src/images/blog-vector-26-mobile.png"),
-            url("/src/images/blog-vector-27-mobile.png");
+    background-image: url("/src/images/blog-article-vector-26-mobile.png"),
+            url("/src/images/blog-article-vector-27-mobile.png");
     
         background-repeat: no-repeat;
         background-size: 100%, 100%;
         background-position: top 75px left 0px, top 79px left 0px;
     
         @include retina {
-            background-image: url("/src/images/blog-vector-26-mobile-2x.png"),
-                url("/src/images/blog-vector-27-mobile-2x.png");
+            background-image: url("/src/images/blog-article-vector-26-mobile-2x.png"),
+                url("/src/images/blog-article-vector-27-mobile-2x.png");
         }
     
         @include mobile {
@@ -20,24 +20,24 @@
         }
     
         @include tablet {
-            background-image: url("/src/images/blog-vector-24-tablet.png"),
-                url("/src/images/blog-vector-22-tablet.png");
+            background-image: url("/src/images/blog-article-vector-24-tablet.png"),
+                url("/src/images/blog-article-vector-22-tablet.png");
             background-position: top 236px left 0px, top 244px left 0px;
     
             @include retina {
-                background-image: url("/src/images/blog-vector-24-tablet-2x.png"),
-                    url("/src/images/blog-vector-22-tablet-2x.png");
+                background-image: url("/src/images/blog-article-vector-24-tablet-2x.png"),
+                    url("/src/images/blog-article-vector-22-tablet-2x.png");
             }
         }
     
         @include desktop {
-            background-image: url("/src/images/blog-vector-24-desktop.png"),
-                url("/src/images/blog-vector-22-desktop.png");
+            background-image: url("/src/images/blog-article-vector-24-desktop.png"),
+                url("/src/images/blog-article-vector-22-desktop.png");
             background-position: top 160px left 0px, top 168px left 0px;
     
             @include retina {
-                background-image: url("/src/images/blog-vector-24-desktop-2x.png"),
-                    url("/src/images/blog-vector-22-desktop-2x.png");
+                background-image: url("/src/images/blog-article-vector-24-desktop-2x.png"),
+                    url("/src/images/blog-article-vector-22-desktop-2x.png");
             }
         }
     background-color: var(--background-color);

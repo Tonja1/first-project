@@ -1,43 +1,52 @@
-.backdrop{
+.backdrop-buy {
     position: fixed;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--background-color);
+    background-color: var(--backdrop-collor);
+    overflow: hidden;
+    transition: opacity var(--cubic-bezier);
 }
 
-.is-hid{
+.is-hid {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-    }
+}
 
-.modal-order1{
-    padding: 100px 44px; 
-    background-color: #01383A;
-    min-width: 272px;
-    // min-height: 395px; 
+.modal-buy {
+    transition: transform var(--cubic-bezier);
+    padding: 100px 20px;
+    background-color: var(--background-color);
+    width: 272px;
+    height: 383px;
     position: absolute;
+    visibility: visible;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    @include tablet{
-        max-width: 688px;
-        // min-height: 524px;
-        padding: 88px 40px;
+
+    @include tablet {
+        width: 688px;
+        height: 566px;
+        padding: 88px 56px;
     }
-    @include desktop{
-        max-width: 768px;
-        // height: 524px;
+
+    @include desktop {
+        width: 768px;
+        height: 602px;
         padding: 88px 80px;
     }
-} 
+}
 
+.backdrop-buy.is-hid .modal-buy {
+    transform: translate(-50%, -50%) scale(0.3);
+}
 
-.modal-btn {
+.modal-buy-btn {
     padding: 10px;
-    width: 31px;
-    height: 31px;
+    width: 32px;
+    height: 32px;
     border: 1.5px solid var(--accent-color);
     border-radius: 50%;
     background-color: transparent;
@@ -49,47 +58,38 @@
     justify-content: center;
     padding: 0;
     cursor: pointer;
-    margin-bottom: 32px;
 }
 
+.buy-text {
+    @include font (500, 24, 1.17);
+    text-align: center;
+    color: var(--main-text-color);
+    margin-bottom: 20px;
 
-.modal-order1-text {
-@include font (500, 56, 1.17);
-min-width: 184px;
-text-align: center;
-color: #FFFFFF;
-margin-bottom: 32px;
-@include tablet{
-    max-width: 608px;
-    margin-bottom: 80px;
-}
-@include desktop{
-    @include font(500, 64, 1.17);
-    margin-bottom: 56px;
-
-} 
+    @include tablet {
+        @include font (500, 56, 1.1785);
+        margin-bottom: 56px;
+    }
 }
 
-.letsgo-btn {
-    @include font(700, 16, 1.18);
-    padding: 16px 51px; 
+.buy-btn {
+    display: block;
+    @include font(700, 16, 1.1875);
+    padding: 16px 25px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 173px;
-    height: 50px; 
     text-transform: uppercase;
-    margin: 0 auto;
-    color: var(--main-btn-color); 
-    background-color: var(--second-btn-color); 
+    color: var(--main-btn-color);
+    background-color: var(--second-btn-color);
     cursor: pointer;
     border: none;
-    border-radius: 16px;
-    transition: var(--cubic-bezier); 
-    @include tablet{
-        width: 306px;
-        padding: 16px 82px; 
-        @include font(700, 32, 1.18); 
+    transition: var(--cubic-bezier);
+
+    @include tablet {
+        padding: 16px 30px;
+        @include font(700, 32, 1.18);
     }
-    
+
 }

@@ -3,41 +3,46 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--background-color);
+    background-color: var(--backdrop-collor);
+    overflow: hidden;
+    transition: opacity var(--cubic-bezier);
 }
 
 .hidden{
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-    }
+}
+.backdrop.hidden .modal {
+    transform: translate(-50%, -50%) scale(0.3);
+}
 
 .modal{
+    transition: transform var(--cubic-bezier);
     padding: 100px 29px; 
-    background-color: #01383A;
-    min-width: 272px;
-    // min-height: 395px; 
+    background-color: var(--background-color);
+    width: 272px;
+    height: 395px;
     position: absolute;
+    visibility: visible;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     @include tablet{
-        max-width: 688px;
-        // min-height: 524px;
-        padding: 88px 66px;
+        width: 688px;
+        height: 524px;
+        padding: 88px 26px;
     }
     @include desktop{
-        max-width: 768px;
-        // height: 524px;
+        width: 768px;
         padding: 88px 66px;
     }
 } 
 
-
 .modal-btn {
     padding: 10px;
-    width: 31px;
-    height: 31px;
+    width: 32px;
+    height: 32px;
     border: 1.5px solid var(--accent-color);
     border-radius: 50%;
     background-color: transparent;
@@ -49,37 +54,33 @@
     justify-content: center;
     padding: 0;
     cursor: pointer;
-    margin-bottom: 32px;
 }
 
 
 .modal-text {
- @include font (500, 56, 1.17);
-min-width: 214px;
+@include font (500, 24, 1.17);
 text-align: center;
-color: #FFFFFF;
+color: var(--main-text-color);
 margin-bottom: 32px;
 @include tablet{
-    max-width: 636px;
+    @include font (500, 56, 1.1785);
     margin-bottom: 80px;
 }
 }
 
 .contacts-btn {
-    @include font(700, 16, 1.18);
-    padding: 16px 75px; 
+    display: block;
+    @include font(700, 16, 1.1875);
+    padding: 16px 75px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 306px;
-    height: 50px; 
     text-transform: uppercase;
-    margin: 0 auto;
     color: var(--main-btn-color); 
     background-color: var(--second-btn-color); 
     cursor: pointer;
     border: none;
-    border-radius: 16px;
     transition: var(--cubic-bezier); 
     @include tablet{
         padding: 16px 131px; 

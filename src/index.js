@@ -1,4 +1,4 @@
-import './menu';
-import './contacts';
-import './buy';
-import './add';
+import './js/menu';
+import './js/contacts';
+import './js/buy';
+// import './js/add';

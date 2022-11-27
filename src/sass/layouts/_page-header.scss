@@ -183,3 +183,7 @@
     opacity: 0;
     pointer-events: none;
 }
+
+.menu.is-hidden {
+    transform: translateY(0%) linear(0.3) opacity(0.3);
+}

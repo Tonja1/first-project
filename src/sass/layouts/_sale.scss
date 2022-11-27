@@ -141,20 +141,21 @@
     @include tablet {
         margin-bottom: 14px;
     }    
-    max-width: 285px;
+    // max-width: 285px;
 }
 
 .price-item {
     @include font(500, 22, 1.18);
     color: var( --accent-color);
     margin-bottom: 11px;
-    width: 261px;
+    width: 250px;
 }
 
 .sale-price {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
+    justify-content: space-between;
     @media screen and (max-width: 767px) {
         margin-bottom: 44px;
         justify-content: space-between;
@@ -164,9 +165,9 @@
     @include font(500, 14, 1);
     text-decoration-line: line-through;
     color: #8D9289;
-    @include mobile {
-        margin-right: 80px;
-    }
+    // @include mobile {
+    //     margin-right: 80px;
+    // }
 }
 .sale-after {
     @include font(500, 20, 1);

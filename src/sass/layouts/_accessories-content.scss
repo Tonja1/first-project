@@ -1,13 +1,118 @@
 .accessories {
     background-color: var(--background-color);
 }
-
-
+.accessories-div {
+    padding: 40px 18px 48px 17px;
+    
+    background-image: url("/src/images/accessories-vector-24-mobile.png"),
+        url("/src/images/accessories-vector-22-mobile.png"),
+        url("../images/background-mobile.jpg");
+    
+    background-repeat: no-repeat;
+    background-size:100%, 100%, cover;
+    background-position: top 173px left 0px, top 177px left 0px, center;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @include retina {
+        background-image: url("/src/images/accessories-vector-24-mobile-2x.png"),
+            url("/src/images/accessories-vector-22-mobile-2x.png"),
+            url("../images/background-mobile-2x.jpg");    
+    }
+    @include mobile {        
+        background-position: top 163px left 0px, top 171px left 0px, center;
+    }
+    @include tablet {        
+        padding: 120px 40px 168px 41px;
+        background-image: url("/src/images/accessories-vector-21-tablet.png"),
+            url("/src/images/accessories-vector-22-tablet.png"),
+            url("../images/background-tablet.jpg");
+        background-position: top 288px left 0px, top 296px left 0px, center;
+        @include retina {
+            background-image: url("/src/images/accessories-vector-21-tablet-2x.png"),
+                url("/src/images/accessories-vector-22-tablet-2x.png"),
+                url("../images/background-tablet-2x.jpg");        
+        }
+    }
+    @include desktop {        
+        background-image: url("/src/images/accessories-vector-21-desktop.png"),
+            url("/src/images/accessories-vector-22-desktop.png"),
+            url("../images/background-desktop-3.jpg");
+        background-position: top 288px left 0px, top 296px left 0px, bottom 0px left 0px;
+        @include retina {
+            background-image: url("/src/images/accessories-vector-21-desktop-2x.png"),
+                url("/src/images/accessories-vector-22-desktop-2x.png"),
+                url("../images/background-desktop-3-2x.jpg");
+        }
+    }
+}
 .accessories-window {
     position: relative;
     overflow: hidden;
 }
+.accessories-title {
+    @include font (500, 24px, 1.7);
+    color: var(--main-title-color);
+    margin-left: -2px;
+    margin-bottom: 27px;
+    @include tablet {
+        @include font (500, 56px, 1.785);
+        margin-left: 102px;
+        margin-bottom: 51px;
+    }
+}
+.container-button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 32px;
+        @include tablet {
+            margin-bottom: 72px;
+    }
+    @include desktop {
+        gap: 44px;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }    
+}
+.btn-all,
+.btn {
+    width: 124px;
+    height: 35px;
+    @include font (700, 16px, 1.1875);
+    border-radius: 16px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
+    @include tablet {
+        width: 132px;
+        height: 51px;
+    }
+    @include desktop {
+        width: 168px;
+    }
+}
+.btn-all {
+    color: var(--main-btn-color);
+    background-color: var(--second-btn-color);
+    border: 2px solid transparent;
+    &:hover,
+    :focus {
+        background: var(--second-btn-color);
+        box-shadow: 0px 4px 4px rgba(134, 229, 67, 0.2);
+    }
+}
+.btn {
+    color: var(--second-btn-color);
+    border: 2px solid var(--second-btn-color);
+    background-color: transparent;
+    &:hover,
+    :focus {
+        filter: drop-shadow(0px 4px 10px rgba(134, 229, 67, 0.1)) drop-shadow(0px 4px 20px rgba(134, 229, 67, 0.4));
+    }
+}
 .window-text {
     position: absolute;
     top: 0;
@@ -22,8 +127,95 @@
     height: 100%;
     transform: translateY(100%);
     transition: transform 300ms linear;
+    opacity: 0;
     overflow: auto;
     .accessories-window:hover & {
         transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animation-list-five {
+    margin-top: 24px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    @include tablet {
+        margin-top: 32px;
+    }
+    @include desktop {
+        display: none;
+    }
+}
+.animation-item-five {
+    width: 16px;
+    height: 16px;
+    border-radius: 30px;
+    background-color: white;
+    animation: 3s leftRight infinite;
+}
+.animation-item-five:first-child {
+    animation-delay: .15s;
+}
+.animation-item-five:nth-child(2) {
+    animation-delay: .30s;
+}
+.animation-item-five:nth-child(3) {
+    animation-delay: .45s;
+}
+.animation-item-five:nth-child(4) {
+    animation-delay: .60s;
+}
+.animation-item-five:nth-child(5) {
+    animation-delay: .75s;
+}
+@keyframes leftRight {
+    0% {
+        width: 16px;
+    }
+    50% {
+        width: 40px;
+    }
+    100% {
+        width: 16px;
+    }
+}
+
+.animation-list-three {
+    @media screen and (max-width: 1279px) {
+        display: none;
+    }
+    margin-top: 32px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+.animation-item-three {
+    width: 16px;
+    height: 16px;
+    border-radius: 30px;
+    background-color: white;
+    animation: 3s leftRight infinite;
+}
+.animation-item-three:first-child {
+    animation-delay: .30s;
+}
+.animation-item-three:nth-child(2) {
+    animation-delay: .60s;
+}
+.animation-item-three:nth-child(3) {
+    animation-delay: .90s;
+}
+@keyframes leftRight {
+    0% {
+        width: 16px;
+    }
+    50% {
+        width: 40px;
+    }
+    100% {
+        width: 16px;
     }
 }

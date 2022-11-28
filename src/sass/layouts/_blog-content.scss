@@ -1,15 +1,22 @@
 .blog {  
   background-color: var(--background-color);
+  padding-top: 40px;
+  padding-bottom: 48px;
+  @include tablet {    
+    padding-top: 120px;
+    padding-bottom: 120px;  
+  }
 }
 .blog-page {
-  padding: 40px 0 48px;
+  padding-left: 0;
+  padding-right: 0;
   background-image: url("/src/images/blog-vector-26-mobile.png"),
         url("/src/images/blog-vector-27-mobile.png"),
         url("../images/background-mobile.jpg");
     
     background-repeat: no-repeat;
     background-size:100%, 100%, cover;
-    background-position: top 50px left 0px, top 54px left 0px, center;
+    background-position: top 10px left 0px, top 14px left 0px, center;
     margin-left: auto;
     margin-right: auto;
     
@@ -19,14 +26,16 @@
             url("../images/background-mobile-2x.jpg");    
     }
     @include mobile {        
-        background-position: top 40px left 0px, top 48px left 0px, center;
+        background-position: top 0px left 0px, top 8px left 0px, center;
     }
-    @include tablet {        
-        padding-bottom: 120px;       
+    @include tablet {
+        padding-left: 40px;
+        padding-right: 40px;
+        // padding-bottom: 120px;       
         background-image: url("/src/images/blog-vector-24-tablet.png"),
             url("/src/images/blog-vector-22-tablet.png"),
             url("../images/background-tablet.jpg");
-        background-position: top 169px left 0px, top 177px left 0px, center;
+        background-position: top 49px left 0px, top 57px left 0px, center;
         @include retina {
             background-image: url("/src/images/blog-vector-24-tablet-2x.png"),
                 url("/src/images/blog-vector-22-tablet-2x.png"),
@@ -37,16 +46,13 @@
         background-image: url("/src/images/blog-vector-24-desktop.png"),
             url("/src/images/blog-vector-22-desktop.png"),
             url("../images/background-desktop-3.jpg");
-        background-position: top 169px left 0px, top 177px left 0px, bottom 0px left 0px;
+        background-position: top 49px left 0px, top 57px left 0px, bottom 0px left 0px;
         @include retina {
             background-image: url("/src/images/blog-vector-24-desktop-2x.png"),
                 url("/src/images/blog-vector-22-desktop-2x.png"),
                 url("../images/background-desktop-3-2x.jpg");
         }
     }
-  @include tablet {
-    padding: 120px 0;
-  }
 }
 .blog-title {
   margin-left: 16px;
@@ -194,29 +200,29 @@
   }
 }
 .blog-list-title {
-  @media screen and (max-width: 479px) {
+  @media screen and (max-width: 767px) {
     margin-left: 16px;
     margin-right: 16px;
   }
 }
 .blog-list__author {
-  @media screen and (max-width: 479px) {
+  @media screen and (max-width: 767px) {
     margin-left: 16px;
   }
 }
 .blog-list__date {
-  @media screen and (max-width: 479px) {
+  @media screen and (max-width: 767px) {
     margin-left: 16px;
   }
 }
 p {
-  @media screen and (max-width: 479px) {
+  @media screen and (max-width: 767px) {
     margin-left: 16px;
     margin-right: 16px;
   }
 }
 .blog-link {
-  @media screen and (max-width: 479px) {
+  @media screen and (max-width: 767px) {
     margin-right: 16px;
   }
 }

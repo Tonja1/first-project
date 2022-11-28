@@ -1,5 +1,15 @@
 .article {
     background-color: var(--background-color);
+    padding-top: 40px;
+    padding-bottom: 48px;
+    @include tablet {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    @include desktop {
+        padding-top: 112px;
+        padding-bottom: 120px;
+    }    
 }
 
 .container-article{
@@ -8,7 +18,7 @@
     
         background-repeat: no-repeat;
         background-size: 100%, 100%;
-        background-position: top 75px left 0px, top 79px left 0px;
+        background-position: top 35px left 0px, top 39px left 0px;
     
         @include retina {
             background-image: url("/src/images/blog-article-vector-26-mobile-2x.png"),
@@ -16,13 +26,13 @@
         }
     
         @include mobile {
-            background-position: top 65px left 0px, top 73px left 0px;
+            background-position: top 25px left 0px, top 33px left 0px;
         }
     
         @include tablet {
             background-image: url("/src/images/blog-article-vector-24-tablet.png"),
                 url("/src/images/blog-article-vector-22-tablet.png");
-            background-position: top 236px left 0px, top 244px left 0px;
+            background-position: top 116px left 0px, top 124px left 0px;
     
             @include retina {
                 background-image: url("/src/images/blog-article-vector-24-tablet-2x.png"),
@@ -33,7 +43,7 @@
         @include desktop {
             background-image: url("/src/images/blog-article-vector-24-desktop.png"),
                 url("/src/images/blog-article-vector-22-desktop.png");
-            background-position: top 160px left 0px, top 168px left 0px;
+            background-position: top 48px left 0px, top 56px left 0px;
     
             @include retina {
                 background-image: url("/src/images/blog-article-vector-24-desktop-2x.png"),
@@ -44,20 +54,10 @@
     color: var(--main-title-color);
     padding-left: 0;
     padding-right: 0;
-    padding-top: 40px;
-    padding-bottom: 48px;
     @include mobile {
         padding-left: 40px;
         padding-right: 40px;
     }
-    @include tablet {
-        padding-top: 120px;
-        padding-bottom: 120px;
-    }
-    @include desktop {
-        padding-top: 112px;
-        padding-bottom: 120px;
-    }    
 }
 .article-title{
     margin-bottom: 31px;
@@ -84,7 +84,7 @@
 }
     @include mobile {
         width: 400px;
-        height: 360px;
+        // height: 360px;
     }
     @include tablet {
         width: 688px;

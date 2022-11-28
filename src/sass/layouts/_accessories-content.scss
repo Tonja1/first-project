@@ -1,8 +1,15 @@
 .accessories {
     background-color: var(--background-color);
+    padding-top: 40px;
+    padding-bottom: 48px;
+    @include tablet {        
+        padding-top: 120px;
+        padding-bottom: 168px;
+    }
 }
 .accessories-div {
-    padding: 40px 18px 48px 18px;
+    padding-left: 18px;
+    padding-right: 18px;
     
     background-image: url("/src/images/accessories-vector-24-mobile.png"),
         url("/src/images/accessories-vector-22-mobile.png"),
@@ -10,7 +17,7 @@
     
     background-repeat: no-repeat;
     background-size:100%, 100%, cover;
-    background-position: top 173px left 0px, top 177px left 0px, center;
+    background-position: top 133px left 0px, top 137px left 0px, center;
     margin-left: auto;
     margin-right: auto;
     
@@ -20,14 +27,15 @@
             url("../images/background-mobile-2x.jpg");    
     }
     @include mobile {        
-        background-position: top 163px left 0px, top 171px left 0px, center;
+        background-position: top 123px left 0px, top 131px left 0px, center;
     }
-    @include tablet {        
-        padding: 120px 40px 168px 41px;
+    @include tablet {
+        padding-left: 40px;
+        padding-right: 41px;
         background-image: url("/src/images/accessories-vector-21-tablet.png"),
             url("/src/images/accessories-vector-22-tablet.png"),
             url("../images/background-tablet.jpg");
-        background-position: top 288px left 0px, top 296px left 0px, center;
+        background-position: top 168px left 0px, top 176px left 0px, center;
         @include retina {
             background-image: url("/src/images/accessories-vector-21-tablet-2x.png"),
                 url("/src/images/accessories-vector-22-tablet-2x.png"),
@@ -38,7 +46,7 @@
         background-image: url("/src/images/accessories-vector-21-desktop.png"),
             url("/src/images/accessories-vector-22-desktop.png"),
             url("../images/background-desktop-3.jpg");
-        background-position: top 288px left 0px, top 296px left 0px, bottom 0px left 0px;
+        background-position: top 168px left 0px, top 176px left 0px, bottom 0px left 0px;
         @include retina {
             background-image: url("/src/images/accessories-vector-21-desktop-2x.png"),
                 url("/src/images/accessories-vector-22-desktop-2x.png"),

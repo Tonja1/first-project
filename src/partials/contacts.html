@@ -1,28 +1,36 @@
-  <section class="contacts">
+<section class="contacts">
     <div class="contacts-div container">
       <h2 class="subtitle">Contacts</h2>
-    <div class="canvas"></div>
-    <picture>
-      <source
+    <div class="contacts-image">
+      <picture>
+        <source
         srcset="
-          ./images/contacts-desktop.jpg 1x,
-          ./images/contacts-desktop-2x.jpg 2x
+        ./images/contacts-desktop.jpg   1x,
+        ./images/contacts-desktop-2x.jpg 2x
         "
-        media="(min-width=1280)"
-      />
-      <source
+        media="(min-width: 1280px)"
+        >
+        <source
         srcset="
-              ./images/contacts-tablet.jpg 1x, 
-              ./images/contacts-tablet-2x.jpg 2x"
-        media="(min-width=768)"
+        ./images/contacts-tablet.jpg   1x,
+        ./images/contacts-tablet-2x.jpg 2x
+        "
+        media="(min-width: 768px)"
+        >
+        <source
+        srcset="
+        ./images/contacts-mobile.jpg   1x,
+        ./images/contacts-mobile-2x.jpg 2x
+        "
+        media="(max-width: 767px)"
+        >
+        <img class="our-team__img"            
+        src="./images/contacts-desktop.jpg"
+        alt="бородатий мужик в окулярах"
+        width="100%"                            
       />
-      <source
-        srcset="./images/contacts-mobile.jpg 1x, 
-                ./images/contacts-mobile-2x.jpg 2x"
-        media="(max-width=767)"
-      />
-      <img src="./images/contacts-mobile.jpg" alt="restangle" width="100%"/>
-    </picture>
+      </picture>            
+    </div>
     <div class="contacts-desktop">
       <div class="contacts-ul">
       <ul class="feedback">
@@ -46,7 +54,7 @@
     </ul>
     </div>    
     <form class="registr__form" name="registr-form">
-      <h2 class="registr__form__title">CONTACT US</h2>
+      <h3 class="registr__form__title">CONTACT US</h3>
       <div class="registr__form__group" role="group">
         <label class="registr__field">
           <input
@@ -77,11 +85,7 @@
           ></textarea>
         </label>
       </div>
-      <button class="registr__btn" type="button" data-contacts-open>
-        <span class="registr__btn__text">SEND</span>
-      </button>
+      <button class="registr__btn" type="button" data-contacts-open>SEND</button>
     </form>
     </div>    
-  </section>
-    </div>
-    
+</section>

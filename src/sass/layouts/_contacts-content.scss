@@ -6,10 +6,51 @@
     padding-bottom: 48px;
     padding-left: 0;
     padding-right: 0;
-    @include mobile {
+    background-image: url("/src/images/contacts-vector-26-mobile.png"),
+        url("/src/images/contacts-vector-27-mobile.png"),
+        url("../images/background-mobile.jpg");
+    
+    background-repeat: no-repeat;
+    background-size:100%, 100%, cover;
+    background-position: top 47px left 0px, top 51px left 0px, center;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @include retina {
+        background-image: url("/src/images/contacts-vector-26-mobile-2x.png"),
+            url("/src/images/contacts-vector-27-mobile-2x.png"),
+            url("../images/background-mobile-2x.jpg");    
+    }
+    @include mobile {        
+        background-position: top 37px left 0px, top 45px left 0px, center;
+    }
+    @include tablet {        
+        padding-top: 120px;
+        padding-bottom: 120px;
         padding-left: 40px;
-        padding-right: 40px;
-    }      
+        padding-right: 40px;      
+        background-image: url("/src/images/contacts-vector-24-tablet.png"),
+            url("/src/images/contacts-vector-22-tablet.png"),
+            url("../images/background-tablet.jpg");
+        background-position: top 165px left 0px, top 173px left 0px, center;
+        @include retina {
+            background-image: url("/src/images/contacts-vector-24-tablet-2x.png"),
+                url("/src/images/contacts-vector-22-tablet-2x.png"),
+                url("../images/background-tablet-2x.jpg");        
+        }
+    }
+    @include desktop {    
+        padding-bottom: 112px;    
+        background-image: url("/src/images/contacts-vector-24-desktop.png"),
+            url("/src/images/contacts-vector-22-desktop.png"),
+            url("../images/background-desktop-1.jpg");
+        background-position: top 165px left 0px, top 173px left 0px, bottom 0px left 0px;
+        @include retina {
+            background-image: url("/src/images/contacts-vector-24-desktop-2x.png"),
+                url("/src/images/contacts-vector-22-desktop-2x.png"),
+                url("../images/background-desktop-1-2x.jpg");
+        }
+    }
 }
 .subtitle {
     margin-bottom: 35px;
@@ -18,26 +59,46 @@
         }
     @include font (500, 24, 1.17);
     color: var(--main-title-color);
+    @include mobile {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
     @include tablet {
         font-size: 56px;
         line-height: 1.785;
         margin-bottom: 67px;
+        margin-left: 59px;
     }
     @include desktop {
         margin-bottom: 75px;
+        margin-left: 102px;
     }
-
 }
-.canvas {
+.contacts-image {
+    width: 100%;
+    margin-bottom: 20px;
     @include tablet {
-        height: 346px;
         margin-bottom: 32px;
+        border-radius: 12px;
+        overflow: hidden;
     }
     @include desktop {
         margin-bottom: 0;
     }
 }
 .contacts-desktop {
+    @media screen and (max-width: 479px) {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    @include mobile {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    @include tablet {
+        margin-left: 0;
+        margin-right: 0;
+    }
     @include desktop {
         display: flex;
         flex-wrap: wrap;
@@ -57,10 +118,6 @@
     line-height: 1.19;
 
     color: #ffffff;
-    @media screen and (max-width: 479px) {
-        margin-left: 16px;
-        margin-right: 16px;
-    }
     @include tablet {
         width: 488px;
         @include font (400, 24, 1.17);
@@ -72,15 +129,10 @@
 
 .feedbac__text {
     margin-bottom: 24px;    
-    
 }
 
 .contacts__list {
-    // width: 147px;
     margin-bottom: 24px;
-    @media screen and (max-width: 479px) {
-            margin-left: 16px;
-        }
     @include tablet {
         display: flex;
         gap: 32px;
@@ -146,21 +198,6 @@
 }
 
 .registr__form {
-    // width: 145px;
-    /* height: 28px; */
-    // left: 17px;
-    // @media screen and (max-width: 1279px) {
-    //     display: flex;
-    //     flex-direction: column;
-    //     align-items:center;
-    //     &:first-child {
-    //         align-items: flex-start;
-    //     } 
-    // }
-    @media screen and (max-width: 479px) {
-        margin-left: 16px;
-        margin-right: 16px;
-    }
     @include desktop {
         margin-top: 58px;
         width: 591px;
@@ -169,12 +206,11 @@
 
 .registr__form__title {
     display: block;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 1.17;
+    @include font (500, 24px, 1.17);
     margin-bottom: 16px;
-    color: #86e543;
+    color: var(--second-title-color);
     @include tablet {
+        font-size: 36px;
         margin-left: 48px;
     }
     @include desktop {
@@ -195,6 +231,7 @@
     @include desktop {
         width: 591px;
         margin-left: 0;
+        margin-bottom: 46px;
     }
 }
 
@@ -203,16 +240,18 @@
     position: relative;
 }
 
-.registr__lable {    
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.25;
+.registr__lable {  
+    @include font (400, 16px, 1.25);
     display: block;
     text-align: left;
     text-transform: capitalize;
 
     margin-bottom: 4px;
     color: #ffffff;
+    @include tablet {
+        font-size: 18px;
+        line-height: 1.1;
+    }
 }
 
 .registr__input {
@@ -222,6 +261,7 @@
     border: transparent;
     border-bottom: 1px solid #86e543;
     margin-bottom: 44px;
+    color: #ffffff;
 }
 
 .registr__input::placeholder {
@@ -238,6 +278,7 @@
     background: transparent;
     border: transparent;
     border: 1px solid #86e543;
+    color: #ffffff;
 }
 
 .registr__message ::placeholder {
@@ -251,6 +292,9 @@
     text-align: center;
     justify-content: center;
     align-items: center;
+    @include font (700, 16px, 1.1875);
+    text-transform: uppercase;
+    color: var(--main-text-color);
     padding: 16px 66px;
     background: transparent;
     width: 173px;
@@ -266,20 +310,12 @@
     &:focus {
     filter: drop-shadow(0px 4px 10px rgba(255, 255, 255, 0.1)) drop-shadow(0px 4px 20px rgba(255, 255, 255, 0.4));
     }
+    @include tablet {
+        font-size: 32px;
+        width: 306px;
+        height: 70px;
+    }
     @include desktop {
         margin-left: 0;
     }
-}
-
-.registr__btn__text {
-    width: 41px;
-    height: 19px;
-
-    
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;    
-    text-transform: uppercase;
-
-    color: #ffffff;
 }

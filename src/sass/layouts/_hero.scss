@@ -4,37 +4,6 @@
     box-sizing: border-box;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0;
-}
-
-ul,
-ol {
-    margin: 0;
-    padding-left: 0;
-    list-style: none;
-}
-
-button {
-    cursor: pointer;
-    border: none;
-}
-
-a {
-    color: currentColor;
-    text-decoration: none;
-}
-
-address {
-    font-style: normal;
-}
-
 img {
     display: block;
 }
@@ -44,99 +13,109 @@ body {
 }
 
 .hero {
-    position: relative;
-    width: 100vw;
-    padding-top: 180px;
-    padding-bottom: 127px;
-    background-image: url(/src/images/hero-bg.jpg);
-    background-repeat: no-repeat;
-    background-position: 70%;
-    background-size: cover;
-    @media screen and (min-width: 768px) {
-        padding-top: 154px;
-        padding-bottom: 208px;
-        background-position: center;
-    }
-    @media screen and (min-width: 1280px) {
-        padding-top: 180px;
-    }
+    background-color: var(--background-color);
+    display: block;
+    top: 50px;
 }
 
-.container {
-    margin: 0 auto;
-    padding: 0 40px;
-    @media screen and (min-width: 480px) {
+.container-hero {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 497px;
+    
+    padding-top: 180px;
+    background-image: url(/src/images/hero-bg.jpg);
+    @include retina {
+        background-image: url(/src/images/hero-bg-2x.jpg);
+    }
+    background-repeat: no-repeat;
+    background-size: 1088px 615px;
+    background-position: bottom -10px right -185px;
+    @include mobile {
         width: 480px;
     }
-    @media screen and (min-width: 768px) {
+    @include tablet {
         width: 768px;
+        height: 724px;
+        padding-top: 163px;
+        padding-left: 41px;
+        background-size: 1152px 774px;
+        background-position: top -50px right -65px;
     }
-    @media screen and (min-width: 1280px) {
+    
+    @include desktop {
+        padding-top: 316px;
+        padding-left: 142px;
+        background-size: contain;
+        background-position: top 0 right 0;
+        margin-top: -136px;
         width: 1280px;
+        height: 860px;
     }
 }
 
-    .hero__icon1 {
-            position: absolute;
-            top: 58px;
-            left: 45px;
-            transform: rotate(-29deg);
-            mix-blend-mode: luminosity;
-            @media screen and (min-width: 768px) {
-                top: 49px;
-                right: 165px;
-                left: auto;
-                width: 100px;
-                transform: rotate(-31.92deg);
-            }
-            @media screen and (min-width: 1280px) {
-                top: 64px;
-                right: 458px;
-                width: 133px;
-                transform: rotate(-34px);
-            }
-        }
+.hero__icon1 {
+    position: absolute;
+    top: 73px;
+    left: 29px;
+    transform: rotate(-29deg);
+    mix-blend-mode: luminosity;
+    @include tablet {
+        top: 49px;
+        left: auto;
+        right: 165px;
+        width: 100px;
+        transform: rotate(-31.92deg);
+    }
+    @include desktop {
+        top: 200px;
+        right: 458px;
+        width: 133px;
+        transform: rotate(-34deg);
+    }
+}
     
-        .hero__icon2 {
-            position: absolute;
-            top: -25px;
-            right: -7px;
-            transform: rotate(28deg);
-            mix-blend-mode: luminosity;
-            @media screen and (min-width: 768px) {
-                top: 226px;
-                right: 20px;
-                left: auto;
-                width: 180px;
-                transform: rotate(10.77deg);
-            }
-            @media screen and (min-width: 1280px) {
-                top: 154px;
-                right: 91px;
-                width: 270px;
-                transform: rotate(18px);
-            }
-        }
+.hero__icon2 {
+    position: absolute;
+    top: -25px;
+    right: -5px;
+    transform: rotate(28deg);
+    mix-blend-mode: luminosity;
+    @include tablet {
+        top: 226px;
+        right: 20px;
+        left: auto;
+        width: 180px;
+        transform: rotate(10.77deg);
+    }
+    @include desktop {
+        top: 290px;
+        right: 91px;
+        width: 270px;
+        transform: rotate(18deg);
+    }
+}
     
-        .hero__icon3 {
-            position: absolute;
-            bottom: 25px;
-            right: 75px;
-            transform: rotate(24deg);
-            mix-blend-mode: luminosity;
-            @media screen and (min-width: 768px) {
-                    bottom: 128px;
-                    right: 188px;
-                    width: 143px;
-                    transform: rotate(21.68deg);
-                }
-            @media screen and (min-width: 1280px) {
-                bottom: 82px;
-                right: 447px;
-                width: 230px;
-                transform: rotate(30px);
-            }
-            }
+.hero__icon3 {
+    position: absolute;
+    bottom: 23px;
+    right: 74px;
+    transform: rotate(24deg);
+    mix-blend-mode: luminosity;
+    @include tablet {
+        bottom: 128px;
+        right: 188px;
+        width: 143px;
+        transform: rotate(21.68deg);
+    }
+    @include desktop {
+        bottom: 82px;
+        right: 447px;
+        width: 230px;
+        transform: rotate(30deg);
+    }
+}
 
 .hero-content {
     display: flex;
@@ -144,12 +123,12 @@ body {
     justify-content: center;
     align-items: center;
     gap: 25px;
-    @media screen and (min-width: 768px) {
-            align-items: baseline;
-            gap: 94px;
-        }
-    @media screen and (min-width: 1280px) {
-        gap: 56px;
+    @include tablet {
+        align-items: baseline;
+        gap: 96px;
+    }
+    @include desktop {
+        gap: 40px;
         padding: 0 100px;
     }
 }
@@ -159,37 +138,36 @@ body {
     font-size: 32px;
     line-height: 1.18;
     text-align: center;
-    color: #FFFFFF;
-    @media screen and (min-width: 768px) {
-            width: 388px;
-            font-size: 56px;
-            line-height: 1.17;
-            text-align: start;
-        }
-    @media screen and (min-width: 1280px) {
+    color: var(--main-title-color);
+    @include tablet {
+        width: 436px;
+        font-size: 56px;
+        line-height: 1.17;
+        text-align: start;
+    }
+    @include desktop {
         font-size: 64px;
         line-height: 1.18;
     }
-    .title-br {
-        @media screen and (min-width: 768px) {
-            display: none;
-            }
+}
+.title-br {
+    @include tablet {
+        display: none;
     }
 }
 
-.hero__link {    
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.18;
+.hero__link {
+    @include font (700, 16px, 1.18);
     text-transform: uppercase;
-    color: #01383A;
-    @media screen and (min-width: 768px) {
+    color: var(--main-btn-color);
+    @include tablet {
         font-size: 32px;
         line-height: 1.18;
     }
     padding: 16px 20px;
-    background: #86E543;
+    background: var(--second-btn-color);
     border-radius: 16px;
+    transition: var(--cubic-bezier);
     &:hover,
     :focus {
         box-shadow: 0px 8px 20px rgba(134, 229, 67, 0.5),

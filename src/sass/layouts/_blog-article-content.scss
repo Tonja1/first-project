@@ -213,16 +213,19 @@
     @include font(400, 24px, 1.16);
     color: var(--main-title-color);}
 }
-
+.article-text-ol-title {
+    @include font(400, 16px, 1.1875);
+    @include tablet {
+        @include font(400, 24px, 1.16);
+        color: var(--second-text-color);
+    }
+}
 .article-text-ol{
     @include font(400, 16px, 1.1875);
     @include tablet {
-    padding-top: 0;
-    @include font(400, 24px, 1.16);
-    color: var(--second-text-color);}
-     @include desktop{ 
-     @include font(400, 24px, 1.16);
-     color: var(--second-text-color);
+        padding-top: 0;
+        @include font(400, 24px, 1.16);
+        color: var(--second-text-color);
     }
 }
 .article-margin-li{

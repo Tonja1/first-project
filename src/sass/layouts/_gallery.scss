@@ -1,0 +1,176 @@
+.all {
+    background-color: var(--background-color);
+    padding-bottom: 48px;
+}
+#slider { /*положение слайдера*/
+    position: relative;
+	text-align: center;
+    // top: 10px;
+}
+
+#slider{ /*центровка слайдера*/
+	margin: 0 auto;
+}
+
+#slides article{ /*все изображения справа друг от доруга*/
+	width: 33.33%;
+	float: left;
+}
+
+#slides .image{ /*устанавливает общий размер блока с изображениями*/
+	width: 300%;
+	line-height: 0;
+}
+
+#overflow{ /*сркывает все, что находится за пределами этого блока*/
+	width: 100%;
+	overflow: hidden;
+}
+
+article img{ /*размер изображений слайдера*/
+	width: 100%;
+}
+
+#desktop:checked ~ #slider{ /*размер всего слайдера*/
+	max-width: 1280px; /*максимальнная длинна*/
+}
+
+.all input{ /*скрывает стандартные инпуты (чекбоксы) на странице*/
+	display: none;
+}
+
+/*позиция изображения при активации переключателя*/
+#switch1:checked ~ #slides .image{
+	margin-left: 0;
+}
+
+#switch2:checked ~ #slides .image{
+	margin-left: -100%;
+}
+
+#switch3:checked ~ #slides .image{
+	margin-left: -200%;
+}
+
+#active label{ /*стиль отдельного переключателя*/
+	border-radius: 16px; /*скругление углов*/
+	display: block; /*расположение в строку*/
+	width: 16px;
+	height: 16px;
+	background: #FFFFFF;
+	margin-right: 16px;
+}
+#active label:nth-child(3) {
+	margin-right: 0;
+}
+
+#active{ /*расположение блока с переключателями*/
+	display: flex;
+	justify-content: center;
+	margin-top: 24px;
+    @include tablet {
+        margin-top: 32px;
+    }
+    @include desktop {
+        margin-top: 24px;
+    }
+}
+
+
+/*цвет активного лейбла при активации чекбокса*/
+#switch1:checked ~ #active label:nth-child(1),
+#switch2:checked ~ #active label:nth-child(2),
+#switch3:checked ~ #active label:nth-child(3) {
+	width: 40px;
+}
+
+#slides .image{ /*анимация пролистывания изображений*/
+	transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+.slider-div {
+	position: relative;
+}
+// .slider-div p {
+//     position: absolute;
+//     @include font (500, 24px, 1.7);
+//     text-align: left;
+//     font-family: var(--main-font);
+//     bottom: 38px;
+// 	left: 24px;
+
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: transparent;
+//     @include tablet {
+//         bottom: 14px;
+// 	    left: 41px;
+//         font-size: 56px;
+//     }
+//     @include desktop {
+//         bottom: 49px;
+//     }
+// }
+.slider-text-baner-1 {
+    position: absolute;
+    @include font (500, 24px, 1.7);
+    text-align: left;
+    font-family: var(--main-font);
+    bottom: 38px;
+	left: 24px;
+
+    
+    @include tablet {
+        bottom: 14px;
+	    left: 41px;
+        font-size: 56px;
+    }
+    @include desktop {
+        bottom: 49px;
+        left: 345px;
+    }
+    background: linear-gradient(270deg, #1EDDE0 13.26%, #8BDA41 51.01%, #EF001B 107.89%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.slider-text-baner-2 {
+    position: absolute;
+    @include font (500, 24px, 1.7);
+    text-align: left;
+    font-family: var(--main-font);
+    bottom: 38px;
+	left: 24px;
+
+    @include tablet {
+        bottom: 14px;
+	    left: 41px;
+        font-size: 56px;
+    }
+    @include desktop {
+        bottom: 49px;
+        left: 49px;
+    }
+    background: linear-gradient(270deg, #03FE8F 23.82%, #EBDCFF 57.84%, #FF98F3 102.62%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.slider-text-baner-3 {
+    position: absolute;
+    @include font (500, 24px, 1.7);
+    text-align: left;
+    font-family: var(--main-font);
+    bottom: 38px;
+	left: 24px;
+
+    @include tablet {
+        bottom: 14px;
+	    left: 41px;
+        font-size: 56px;
+    }
+    @include desktop {
+        bottom: 49px;
+        left: 49px;
+    }
+    background: linear-gradient(270deg, #FFFFFF 27.78%, #693CF9 61.11%, #F475EB 102.56%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

@@ -2,10 +2,10 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://Nickolas5690.github.io/First-project",
+  "homepage": "https://Tonja1.github.io/first-project",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /First-project/"
+    "build": "parcel build src/*.html --public-url /first-project/"
   },
   "repository": {
     "type": "git",
